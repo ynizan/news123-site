@@ -747,7 +747,7 @@ python3 tests/brand_compliance_test.py
 6. **Cloudflare deploys automatically** (monitors GitHub)
 
 7. **Post-deploy verification:**
-   - Check https://news123.info
+   - Check https://ainews123.com
    - Verify logo renders
    - Check star cutouts
    - Test on real mobile device

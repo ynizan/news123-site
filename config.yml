@@ -3,25 +3,25 @@
 
 site:
   name: News123
-  domain: news123.info
-  base_url: https://news123.info
+  domain: ainews123.com
+  base_url: https://ainews123.com
   description: News aggregation and articles site
 
 # Analytics configuration
 analytics:
-  plausible_domain: news123.info
+  plausible_domain: ainews123.com
 
 # Contact information
 contact:
-  email: contact@news123.info
-  support_email: support@news123.info
+  email: contact@ainews123.com
+  support_email: support@ainews123.com
 
 # Testing configuration
 testing:
-  test_url: https://news123.info
+  test_url: https://ainews123.com
   skip_live_tests: false
 
 # Cloudflare worker configuration
 worker:
   name: news123-feedback-proxy
-  domain: news123.info
+  domain: ainews123.com

@@ -3,12 +3,12 @@ main = "feedback-proxy.js"
 compatibility_date = "2024-01-01"
 
 # Worker will be available at: news123-feedback-proxy.your-subdomain.workers.dev
-# Or you can bind it to a route like: api.news123.info/feedback
+# Or you can bind it to a route like: api.ainews123.com/feedback
 
 # Environment variables (add via Cloudflare dashboard or wrangler)
 # GITHUB_TOKEN = "your-github-personal-access-token"
 
 # Optional: Custom routes
 # routes = [
-#   { pattern = "news123.info/api/feedback", zone_name = "news123.info" }
+#   { pattern = "ainews123.com/api/feedback", zone_name = "ainews123.com" }
 # ]

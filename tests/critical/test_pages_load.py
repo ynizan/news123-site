@@ -7,7 +7,7 @@ def test_homepage_loads(page, live_url):
     response = page.goto(live_url)
 
     # Handle 403 from Cloudflare bot protection on production
-    if response.status == 403 and 'news123.info' in live_url:
+    if response.status == 403 and 'ainews123.com' in live_url:
         pytest.skip("Production site has bot protection enabled (403)")
 
     assert response.status == 200, f"Homepage returned {response.status}"
@@ -18,7 +18,7 @@ def test_sample_permit_page_loads(page, live_url):
     response = page.goto(f"{live_url}/california/los-angeles/apply-for-a-business-license/")
 
     # Handle 403 from Cloudflare bot protection on production
-    if response.status == 403 and 'news123.info' in live_url:
+    if response.status == 403 and 'ainews123.com' in live_url:
         pytest.skip("Production site has bot protection enabled (403)")
 
     assert response.status == 200, f"Permit page returned {response.status}"
@@ -40,7 +40,7 @@ def test_no_console_errors(page, live_url):
     response = page.goto(live_url)
 
     # Handle 403 from Cloudflare bot protection on production
-    if response.status == 403 and 'news123.info' in live_url:
+    if response.status == 403 and 'ainews123.com' in live_url:
         pytest.skip("Production site has bot protection enabled (403)")
 
     # Filter out known acceptable errors

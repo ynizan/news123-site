@@ -64,5 +64,5 @@ Offer: 20% off first 3 months with code EARLYBIRD
 
 ## Contact List
 
-- Support email: support@news123.info
-- Sales email: sales@news123.info
+- Support email: support@ainews123.com
+- Sales email: sales@ainews123.com

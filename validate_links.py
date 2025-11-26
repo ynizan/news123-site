@@ -27,7 +27,7 @@ except ImportError:
 
 # Configuration
 OUTPUT_DIR = "output"
-BASE_URL = "https://news123.info"
+BASE_URL = "https://ainews123.com"
 
 
 def extract_links_from_html(html_content, base_path=""):
@@ -198,7 +198,7 @@ async def validate_production_links():
                     parsed = urlparse(link)
 
                     # Only check internal links
-                    if parsed.netloc and parsed.netloc not in ['news123.info', 'www.news123.info']:
+                    if parsed.netloc and parsed.netloc not in ['ainews123.com', 'www.ainews123.com']:
                         continue
 
                     link_path = parsed.path

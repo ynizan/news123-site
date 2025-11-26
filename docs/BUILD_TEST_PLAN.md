@@ -284,7 +284,7 @@ Before each release, manually verify:
 ```bash
 # Using Lighthouse CI
 npm install -g @lhci/cli
-lhci autorun --collect.url=https://news123.info/california/food-truck-operating-permit/
+lhci autorun --collect.url=https://ainews123.com/california/food-truck-operating-permit/
 
 # Target scores:
 # Performance: 90+

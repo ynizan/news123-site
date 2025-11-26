@@ -141,7 +141,7 @@ def tablet_page(browser):
 @pytest.fixture(scope="session")
 def live_url():
     """Base URL for live site"""
-    return os.getenv('TEST_URL', 'https://news123.info')
+    return os.getenv('TEST_URL', 'https://ainews123.com')
 
 @pytest.fixture(scope="session")
 def output_dir():
@@ -1096,7 +1096,7 @@ def generate_fix_steps(test_name, error_msg):
             "2. Check all pages in output/ are included",
             "3. Ensure lastmod dates are ISO format",
             "4. Regenerate: python3 generator.py",
-            "5. Validate sitemap at https://news123.info/sitemap.xml"
+            "5. Validate sitemap at https://ainews123.com/sitemap.xml"
         ]
     
     # Broken link tests
@@ -1255,7 +1255,7 @@ echo "✅ Critical tests complete!"
 - Check Python version: `python3 --version` (should be 3.11+)
 - Verify Playwright installed: `python -m playwright install chromium`
 - Run generator first: `python3 generator.py`
-- Check live URL is accessible: `https://news123.info`
+- Check live URL is accessible: `https://ainews123.com`
 
 **GitHub Actions fail:**
 - Check workflow logs in Actions tab

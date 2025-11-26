@@ -109,21 +109,21 @@ def test_sitemap_has_proper_priorities(output_dir):
         actual_priority = float(actual_priority)
 
         # Find matching permit in data
-        # URL format: https://news123.info/{state}/{city}/apply-for-a-business-license/
-        # or: https://news123.info/{state}/apply-for-a-business-license/
+        # URL format: https://ainews123.com/{state}/{city}/apply-for-a-business-license/
+        # or: https://ainews123.com/{state}/apply-for-a-business-license/
         url_parts = url.rstrip('/').split('/')
 
-        # Need at least: https, '', news123.info, state, permit
+        # Need at least: https, '', ainews123.com, state, permit
         if len(url_parts) < 5:
             continue
 
         # Extract components
         if len(url_parts) == 5:
-            # State-level: https://news123.info/{state}/{permit}/
+            # State-level: https://ainews123.com/{state}/{permit}/
             state_slug = url_parts[3]
             city_slug = None
         else:
-            # City-level: https://news123.info/{state}/{city}/{permit}/
+            # City-level: https://ainews123.com/{state}/{city}/{permit}/
             state_slug = url_parts[3]
             city_slug = url_parts[4]
 
@@ -251,7 +251,7 @@ def test_noindex_matches_sitemap_priority(output_dir):
         # Get URL from file path
         rel_path = html_file.relative_to(output_dir)
         url_path = '/' + str(rel_path.parent) + '/'
-        full_url = f"https://news123.info{url_path}"
+        full_url = f"https://ainews123.com{url_path}"
 
         if full_url not in url_priorities:
             continue
@@ -309,6 +309,6 @@ def test_robots_txt_exists_with_sitemap(output_dir):
         "Search engines won't discover the sitemap."
     )
 
-    assert 'https://news123.info/sitemap.xml' in robots_content, (
+    assert 'https://ainews123.com/sitemap.xml' in robots_content, (
         "❌ CRITICAL: robots.txt has incorrect sitemap URL!"
     )

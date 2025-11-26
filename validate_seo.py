@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
 SEO Validation Script for News123
-Tests deployed site at https://news123.info/
+Tests deployed site at https://ainews123.com/
 """
 
 import asyncio
 import json
 from playwright.async_api import async_playwright
 
-BASE_URL = "https://news123.info"
+BASE_URL = "https://ainews123.com"
 
 async def validate_seo():
     """Run comprehensive SEO validation tests"""

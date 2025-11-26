@@ -204,7 +204,7 @@ git push origin main
 
 ### Step 9: Test It!
 
-1. **Open:** https://news123.info/california/contractor-license/
+1. **Open:** https://ainews123.com/california/contractor-license/
 
 2. **Fill out feedback form:**
    - Select: 💡 Helpful Tip
@@ -332,11 +332,11 @@ To approve and display on site:
 4. Site rebuilds with approved feedback
 
 ### 3. Optional: Custom Domain
-Instead of `.workers.dev` URL, use `api.news123.info/feedback`:
+Instead of `.workers.dev` URL, use `api.ainews123.com/feedback`:
 
 **In Cloudflare Dashboard:**
 - Workers → news123-feedback-proxy → Settings → Triggers
-- Add Route: `news123.info/api/feedback`
+- Add Route: `ainews123.com/api/feedback`
 - Update template to use this URL
 
 ---

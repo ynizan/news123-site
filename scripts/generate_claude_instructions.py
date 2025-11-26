@@ -153,7 +153,7 @@ def generate_fix_steps(test_name, error_msg):
             "2. Check all pages in output/ are included",
             "3. Ensure lastmod dates are ISO format",
             "4. Regenerate: python3 generator.py",
-            "5. Validate sitemap at https://news123.info/sitemap.xml"
+            "5. Validate sitemap at https://ainews123.com/sitemap.xml"
         ]
 
     # Broken link tests
