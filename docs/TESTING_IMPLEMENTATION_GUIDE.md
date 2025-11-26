@@ -1,4 +1,4 @@
-# PermitIndex Testing System Implementation Guide
+# News123 Testing System Implementation Guide
 
 Complete guide for implementing automated testing with Claude Code-ready failure instructions.
 
@@ -141,7 +141,7 @@ def tablet_page(browser):
 @pytest.fixture(scope="session")
 def live_url():
     """Base URL for live site"""
-    return os.getenv('TEST_URL', 'https://permitindex.com')
+    return os.getenv('TEST_URL', 'https://news123.info')
 
 @pytest.fixture(scope="session")
 def output_dir():
@@ -682,7 +682,7 @@ def test_logo_present(page, live_url):
     page.goto(live_url)
     
     # Look for logo by various selectors
-    logo = page.locator('svg, img[alt*="PermitIndex"], a[href="/"] img').first
+    logo = page.locator('svg, img[alt*="News123"], a[href="/"] img').first
     assert logo.count() > 0, "Logo not found on homepage"
 
 @pytest.mark.visual
@@ -860,7 +860,7 @@ jobs:
           server_port: 465
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "PermitIndex Visual Tests Failed - Claude Code Instructions"
+          subject: "News123 Visual Tests Failed - Claude Code Instructions"
           to: ${{ secrets.NOTIFICATION_EMAIL }}
           from: GitHub Actions <noreply@github.com>
           body: file://claude-instructions.txt
@@ -927,7 +927,7 @@ jobs:
           server_port: 465
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "PermitIndex Weekly Tests Failed - Claude Code Instructions"
+          subject: "News123 Weekly Tests Failed - Claude Code Instructions"
           to: ${{ secrets.NOTIFICATION_EMAIL }}
           from: GitHub Actions <noreply@github.com>
           body: file://claude-instructions.txt
@@ -969,13 +969,13 @@ def generate_instructions(test_report):
     
     # Header
     instructions = [
-        f"Subject: PermitIndex Tests Failed - {len(failed_tests)} issues detected\n",
+        f"Subject: News123 Tests Failed - {len(failed_tests)} issues detected\n",
         "",
         "─" * 70,
         "COPY EVERYTHING BELOW THIS LINE TO CLAUDE CODE",
         "─" * 70,
         "",
-        f"PermitIndex automated tests detected {len(failed_tests)} issues that need fixing.",
+        f"News123 automated tests detected {len(failed_tests)} issues that need fixing.",
         "",
         f"TASK: Fix the following test failures detected on {datetime.now().strftime('%Y-%m-%d')} at {datetime.now().strftime('%H:%M')} UTC",
         ""
@@ -1096,7 +1096,7 @@ def generate_fix_steps(test_name, error_msg):
             "2. Check all pages in output/ are included",
             "3. Ensure lastmod dates are ISO format",
             "4. Regenerate: python3 generator.py",
-            "5. Validate sitemap at https://permitindex.com/sitemap.xml"
+            "5. Validate sitemap at https://news123.info/sitemap.xml"
         ]
     
     # Broken link tests
@@ -1184,7 +1184,7 @@ if __name__ == '__main__':
 ```bash
 #!/bin/bash
 
-echo "🧪 Running all PermitIndex tests..."
+echo "🧪 Running all News123 tests..."
 
 # Critical tests
 echo "📍 Critical tests..."
@@ -1255,7 +1255,7 @@ echo "✅ Critical tests complete!"
 - Check Python version: `python3 --version` (should be 3.11+)
 - Verify Playwright installed: `python -m playwright install chromium`
 - Run generator first: `python3 generator.py`
-- Check live URL is accessible: `https://permitindex.com`
+- Check live URL is accessible: `https://news123.info`
 
 **GitHub Actions fail:**
 - Check workflow logs in Actions tab

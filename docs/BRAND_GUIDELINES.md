@@ -1,4 +1,4 @@
-# PermitIndex Brand Guidelines
+# News123 Brand Guidelines
 
 **Version 1.0 | November 2024**
 
@@ -21,7 +21,7 @@
 
 ### Brand Essence
 
-**PermitIndex** is the comprehensive database of US government transactions, permits, and applications. We provide infrastructure that makes government interactions simple, transparent, and accessible.
+**News123** is the comprehensive database of US government transactions, permits, and applications. We provide infrastructure that makes government interactions simple, transparent, and accessible.
 
 ### Positioning
 - **What we are:** Developer infrastructure for government transactions ("Stripe for government")
@@ -40,7 +40,7 @@
 ### Primary Logo: Horizontal Wordmark
 
 **Logo Features:**
-- Wordmark: "PermitIndex" (one word, no space)
+- Wordmark: "News123" (one word, no space)
 - Star cutout from top-right corner of "P"
 - Font: Arial Black (or similar heavy sans-serif)
 - Letter spacing: -1px for tight, modern look
@@ -386,7 +386,7 @@ All badges include star cutout in top-right.
 
 ```html
 <header>
-    <svg viewBox="0 0 240 40" role="img" aria-label="PermitIndex">
+    <svg viewBox="0 0 240 40" role="img" aria-label="News123">
         <!-- Inline SVG logo -->
     </svg>
     <nav>
@@ -498,7 +498,7 @@ For border-radius R:
 ## Contact
 
 For brand questions or asset requests:
-- Website: permitindex.com
+- Website: news123.info
 - Repository: github.com/ynizan/permitindex-site
 
 **Document Version:** 1.0  
@@ -507,4 +507,4 @@ For brand questions or asset requests:
 
 ---
 
-*These guidelines ensure consistency across all PermitIndex touchpoints while maintaining flexibility for growth.*
+*These guidelines ensure consistency across all News123 touchpoints while maintaining flexibility for growth.*

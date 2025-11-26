@@ -56,7 +56,7 @@ After re-running the workflow:
    - Wait 2-3 minutes
 
 5. **Feedback appears on live site** ✅
-   - Visit: https://permitindex.com/california/contractor-license/
+   - Visit: https://news123.info/california/contractor-license/
    - Look for "Community Contributions" section
    - Should show: "Second validation test - checking workflow improvements"
 

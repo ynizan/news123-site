@@ -5,34 +5,34 @@ Based on the official brand assets
 Creates 6 versions total:
 - Icon (Square P): primary, white, black
 - Horizontal: primary, white, black
-Outputs to ~/Downloads/permitindex-logos/
+Outputs to ~/Downloads/news123-logos/
 """
 
 from playwright.sync_api import sync_playwright
 import os
 
 # Output to user's Downloads folder, outside the project
-OUTPUT_DIR = os.path.expanduser('~/Downloads/permitindex-logos')
+OUTPUT_DIR = os.path.expanduser('~/Downloads/news123-logos')
 
 # Logo variations
 LOGO_CONFIGS = [
     # SQUARE ICON LOGOS
     {
-        'name': 'permitindex-icon-primary.png',
+        'name': 'news123-icon-primary.png',
         'type': 'icon',
         'color': '#003366',
         'bg': 'transparent',
         'desc': 'Square icon - Primary blue'
     },
     {
-        'name': 'permitindex-icon-white.png',
+        'name': 'news123-icon-white.png',
         'type': 'icon',
         'color': '#FFFFFF',
         'bg': '#003366',
         'desc': 'Square icon - White on navy'
     },
     {
-        'name': 'permitindex-icon-black.png',
+        'name': 'news123-icon-black.png',
         'type': 'icon',
         'color': '#000000',
         'bg': 'transparent',
@@ -40,21 +40,21 @@ LOGO_CONFIGS = [
     },
     # HORIZONTAL LOGOS
     {
-        'name': 'permitindex-horizontal-primary.png',
+        'name': 'news123-horizontal-primary.png',
         'type': 'horizontal',
         'color': '#003366',
         'bg': 'transparent',
         'desc': 'Horizontal logo - Primary blue'
     },
     {
-        'name': 'permitindex-horizontal-white.png',
+        'name': 'news123-horizontal-white.png',
         'type': 'horizontal',
         'color': '#FFFFFF',
         'bg': '#003366',
         'desc': 'Horizontal logo - White on navy'
     },
     {
-        'name': 'permitindex-horizontal-black.png',
+        'name': 'news123-horizontal-black.png',
         'type': 'horizontal',
         'color': '#000000',
         'bg': 'transparent',
@@ -190,13 +190,13 @@ def generate_logos():
     print(f"\n📂 Files saved to: {OUTPUT_DIR}/\n")
     print("Generated files:")
     print("\nSquare Icons:")
-    print("  - permitindex-icon-primary.png")
-    print("  - permitindex-icon-white.png")
-    print("  - permitindex-icon-black.png")
+    print("  - news123-icon-primary.png")
+    print("  - news123-icon-white.png")
+    print("  - news123-icon-black.png")
     print("\nHorizontal Logos:")
-    print("  - permitindex-horizontal-primary.png")
-    print("  - permitindex-horizontal-white.png")
-    print("  - permitindex-horizontal-black.png")
+    print("  - news123-horizontal-primary.png")
+    print("  - news123-horizontal-white.png")
+    print("  - news123-horizontal-black.png")
     print(f"\n⚠️  These files are OUTSIDE the project directory and will NOT be committed to git")
 
 if __name__ == '__main__':

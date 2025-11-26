@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Link Validation Script for PermitIndex
+Link Validation Script for News123
 Can validate links in local build OR production site
 
 Usage:
@@ -27,7 +27,7 @@ except ImportError:
 
 # Configuration
 OUTPUT_DIR = "output"
-BASE_URL = "https://permitindex.com"
+BASE_URL = "https://news123.info"
 
 
 def extract_links_from_html(html_content, base_path=""):
@@ -198,7 +198,7 @@ async def validate_production_links():
                     parsed = urlparse(link)
 
                     # Only check internal links
-                    if parsed.netloc and parsed.netloc not in ['permitindex.com', 'www.permitindex.com']:
+                    if parsed.netloc and parsed.netloc not in ['news123.info', 'www.news123.info']:
                         continue
 
                     link_path = parsed.path

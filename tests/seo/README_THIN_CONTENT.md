@@ -215,7 +215,7 @@ Update these tests when:
 
 - **How do I know if a page should be noindexed?** Run the detection logic manually:
   ```python
-  python3 -c "from generator import PermitIndexGenerator; g = PermitIndexGenerator(); print(g.should_noindex_page({'description': 'test', ...}))"
+  python3 -c "from generator import News123Generator; g = News123Generator(); print(g.should_noindex_page({'description': 'test', ...}))"
   ```
 
 - **Can I disable these tests?** No. They are critical for SEO health. If you need to bypass temporarily (e.g., debugging), use `pytest -k "not thin_content"`.

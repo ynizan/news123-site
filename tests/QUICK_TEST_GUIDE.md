@@ -42,7 +42,7 @@ python3 tests/test_approval_workflow.py
    - Should be CLOSED with bot comment
 
 5. **Check live site** (wait 2-3 min for rebuild):
-   - Visit https://permitindex.com/california/contractor-license/
+   - Visit https://news123.info/california/contractor-license/
    - Look for "Community Contributions" section
    - Should show: "Testing from Comet - validation check"
 
@@ -80,7 +80,7 @@ python3 tests/test_approval_workflow.py
 - [ ] Only ONE entry for issue #4 (no duplicates)
 - [ ] Workflow "Approve User Feedback" completed successfully
 - [ ] No merge conflicts in workflow logs
-- [ ] Feedback appears in "Community Contributions" on https://permitindex.com/california/contractor-license/
+- [ ] Feedback appears in "Community Contributions" on https://news123.info/california/contractor-license/
 
 ---
 

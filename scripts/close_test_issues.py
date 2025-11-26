@@ -4,7 +4,7 @@ Close test GitHub issues
 """
 import requests
 
-REPO = "ynizan/permitindex-site"
+REPO = "ynizan/news123-site"
 # Close test issues #1, #3, #4, #5
 TEST_ISSUES = [1, 3, 4, 5]
 

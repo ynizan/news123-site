@@ -427,7 +427,7 @@ class SiteGenerator:
         print("\n🗺️  Generating sitemap.xml...")
 
         # Base URL for the site
-        base_url = "https://permitindex.com"
+        base_url = "https://news123.info"
 
         # Build sitemap XML
         sitemap_content = ['<?xml version="1.0" encoding="UTF-8"?>']
@@ -558,7 +558,7 @@ class SiteGenerator:
             "Allow: /",
             "",
             "# Sitemap location",
-            "Sitemap: https://permitindex.com/sitemap.xml"
+            "Sitemap: https://news123.info/sitemap.xml"
         ]
 
         # Write robots.txt

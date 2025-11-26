@@ -1,13 +1,13 @@
-# PermitIndex Brand Implementation Guide
+# News123 Brand Implementation Guide
 
 **For: Claude Code**  
-**Purpose:** Implement brand guidelines consistently across the PermitIndex site
+**Purpose:** Implement brand guidelines consistently across the News123 site
 
 ---
 
 ## Overview
 
-This document provides step-by-step instructions for implementing the PermitIndex brand system, including:
+This document provides step-by-step instructions for implementing the News123 brand system, including:
 1. CSS setup with brand variables
 2. Logo implementation (SVG)
 3. Star cutout system for all elements
@@ -84,9 +84,9 @@ h4 { font-size: 18px; font-weight: 700; }
 **Implementation:**
 ```html
 <div class="logo">
-    <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PermitIndex">
-        <title>PermitIndex</title>
-        <desc>PermitIndex - Complete database of US government transactions</desc>
+    <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="News123">
+        <title>News123</title>
+        <desc>News123 - Complete database of US government transactions</desc>
         <defs>
             <mask id="p-star-mask">
                 <rect width="100%" height="100%" fill="white"/>
@@ -367,7 +367,7 @@ playwright install
 
 ```python
 """
-PermitIndex Brand Compliance Tests
+News123 Brand Compliance Tests
 Tests visual consistency of brand elements across the site
 """
 
@@ -388,7 +388,7 @@ def test_brand_compliance():
         
         # Test 1: Logo exists and uses correct colors
         print("\n1️⃣ Testing logo...")
-        logo = page.locator('svg[role="img"][aria-label="PermitIndex"]')
+        logo = page.locator('svg[role="img"][aria-label="News123"]')
         assert logo.count() > 0, "❌ Logo SVG not found"
         
         # Check logo color (should be primary blue)
@@ -432,10 +432,10 @@ def test_brand_compliance():
         # Test 6: Accessibility - Logo has proper ARIA
         print("\n6️⃣ Testing accessibility...")
         logo_aria = logo.get_attribute('aria-label')
-        assert logo_aria == 'PermitIndex', f"❌ Logo aria-label incorrect: {logo_aria}"
+        assert logo_aria == 'News123', f"❌ Logo aria-label incorrect: {logo_aria}"
         
         logo_title = page.locator('svg[role="img"] title').inner_text()
-        assert 'PermitIndex' in logo_title, "❌ Logo <title> missing or incorrect"
+        assert 'News123' in logo_title, "❌ Logo <title> missing or incorrect"
         print("   ✅ Accessibility attributes present")
         
         # Test 7: Responsive - logo scales properly
@@ -747,7 +747,7 @@ python3 tests/brand_compliance_test.py
 6. **Cloudflare deploys automatically** (monitors GitHub)
 
 7. **Post-deploy verification:**
-   - Check https://permitindex.com
+   - Check https://news123.info
    - Verify logo renders
    - Check star cutouts
    - Test on real mobile device
@@ -775,8 +775,8 @@ python3 tests/brand_compliance_test.py
 ## Resources
 
 - **Brand Guidelines:** `/BRAND_GUIDELINES.md`
-- **Logo Suite:** `/permitindex-logo-suite.html`
-- **Brand System Demo:** `/permitindex-brand-final.html`
+- **Logo Suite:** `/news123-logo-suite.html`
+- **Brand System Demo:** `/news123-brand-final.html`
 - **Test Screenshots:** `/tests/screenshots/`
 
 ---

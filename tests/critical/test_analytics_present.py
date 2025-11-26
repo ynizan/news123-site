@@ -6,7 +6,7 @@ def test_plausible_script_exists(page, live_url):
     response = page.goto(live_url)
 
     # Handle 403 from Cloudflare bot protection on production
-    if response.status == 403 and 'permitindex.com' in live_url:
+    if response.status == 403 and 'news123.info' in live_url:
         pytest.skip("Production site has bot protection enabled (403)")
 
     plausible_script = page.locator('script[src*="plausible.io"]')
@@ -25,7 +25,7 @@ def test_plausible_loads(page, live_url):
     response = page.goto(live_url)
 
     # Handle 403 from Cloudflare bot protection on production
-    if response.status == 403 and 'permitindex.com' in live_url:
+    if response.status == 403 and 'news123.info' in live_url:
         pytest.skip("Production site has bot protection enabled (403)")
 
     page.wait_for_timeout(2000)  # Wait for script to load
@@ -39,7 +39,7 @@ def test_plausible_initialized(page, live_url):
     response = page.goto(live_url)
 
     # Handle 403 from Cloudflare bot protection on production
-    if response.status == 403 and 'permitindex.com' in live_url:
+    if response.status == 403 and 'news123.info' in live_url:
         pytest.skip("Production site has bot protection enabled (403)")
 
     page.wait_for_timeout(2000)

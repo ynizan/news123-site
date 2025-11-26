@@ -5,7 +5,7 @@ import requests
 @pytest.mark.slow
 def test_worker_endpoint_accessible():
     """Tests that Cloudflare Worker endpoint is accessible"""
-    worker_url = "https://permitindex-feedback-proxy.yaniv-nizan.workers.dev"
+    worker_url = "https://news123-feedback-proxy.yaniv-nizan.workers.dev"
 
     try:
         # OPTIONS request should return CORS headers
@@ -18,7 +18,7 @@ def test_worker_endpoint_accessible():
 @pytest.mark.slow
 def test_worker_cors_headers():
     """Verifies Worker returns proper CORS headers"""
-    worker_url = "https://permitindex-feedback-proxy.yaniv-nizan.workers.dev"
+    worker_url = "https://news123-feedback-proxy.yaniv-nizan.workers.dev"
 
     try:
         response = requests.options(worker_url, timeout=10)

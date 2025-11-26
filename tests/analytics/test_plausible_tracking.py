@@ -28,4 +28,4 @@ def test_plausible_domain_tracking(page, live_url):
     if plausible_script.count() > 0:
         data_domain = plausible_script.get_attribute('data-domain')
         assert data_domain, "Plausible data-domain not set"
-        assert 'permitindex' in data_domain.lower(), f"Unexpected domain: {data_domain}"
+        assert 'news123' in data_domain.lower(), f"Unexpected domain: {data_domain}"

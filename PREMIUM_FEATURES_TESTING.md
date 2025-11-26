@@ -19,7 +19,7 @@
 
 - [ ] All "Upgrade to Pro" buttons → `/coming-soon/`
 - [ ] All "Get API Access" buttons → `/coming-soon/` or mailto
-- [ ] "Talk to Us" button → `mailto:sales@permitindex.com`
+- [ ] "Talk to Us" button → `mailto:sales@news123.info`
 - [ ] Pricing page CTAs → `/coming-soon/`
 - [ ] All links preserve URL parameters (`?feature=X`)
 

@@ -2,14 +2,14 @@
 """
 Generate square PNG logo variations for PermitIndex (just the P)
 Creates 4 versions: Primary (Navy), Accent (Orange), White, and Black
-Outputs to ~/Downloads/permitindex-logos/
+Outputs to ~/Downloads/news123-logos/
 """
 
 from playwright.sync_api import sync_playwright
 import os
 
 # Output to user's Downloads folder, outside the project
-OUTPUT_DIR = os.path.expanduser('~/Downloads/permitindex-logos')
+OUTPUT_DIR = os.path.expanduser('~/Downloads/news123-logos')
 
 # Logo variations with different colors
 LOGO_VARIATIONS = {

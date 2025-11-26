@@ -1,6 +1,6 @@
-# PermitIndex JSON Schema Documentation
+# News123 JSON Schema Documentation
 
-This document defines the complete data schema for permits in the PermitIndex system.
+This document defines the complete data schema for permits in the News123 system.
 
 ## Schema Version: 3.2 (31 fields)
 
@@ -543,7 +543,7 @@ If you encounter schema validation errors:
 
 ---
 
-**Schema Maintainer**: PermitIndex Development Team
+**Schema Maintainer**: News123 Development Team
 **Last Schema Change**: 2025-11-19 (Added name field for short 2-word display names)
 **Previous Change**: 2025-11-19 (Added 2 fields: description, processing_time)
 **Next Review**: As needed for new features

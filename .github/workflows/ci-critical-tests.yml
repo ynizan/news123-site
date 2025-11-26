@@ -65,7 +65,7 @@ jobs:
         if: steps.critical_tests.outcome == 'failure' && ((github.event_name == 'push' && github.ref == 'refs/heads/main') || github.event_name == 'workflow_dispatch')
         run: |
           curl -X POST -H 'Content-type: application/json' \
-            --data '{"text":"🚨 *PermitIndex Critical Tests Failed*\n\nTest report has been generated. Check the workflow artifacts for details.\n\nWorkflow: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+            --data '{"text":"🚨 *News123 Critical Tests Failed*\n\nTest report has been generated. Check the workflow artifacts for details.\n\nWorkflow: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
             ${{ secrets.SLACK_WEB_HOOK }}
 
       - name: Fail if tests failed
