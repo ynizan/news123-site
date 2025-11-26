@@ -9,6 +9,6 @@ pytest-playwright==0.4.3
 playwright==1.40.0
 pytest-html==4.1.1
 pytest-json-report==1.5.0
-pytest-xdist==3.5.0
+pytest-xdist==3.8.0
 requests==2.31.0
 pyyaml==6.0.1
