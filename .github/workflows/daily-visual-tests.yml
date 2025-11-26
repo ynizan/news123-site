@@ -1,0 +1,61 @@
+name: Daily Visual & Brand Tests
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # 3 AM UTC daily
+  workflow_dispatch:
+
+jobs:
+  visual-tests:
+    runs-on: ubuntu-22.04  # Use 22.04 for better package compatibility
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Install Playwright browsers
+        run: |
+          python -m playwright install --with-deps chromium
+
+      - name: Run visual tests
+        id: tests
+        continue-on-error: true
+        run: |
+          pytest tests/visual/ \
+            -m visual \
+            --json-report \
+            --json-report-file=tests/reports/visual-report.json \
+            --html=tests/reports/visual-report.html \
+            --self-contained-html
+
+      - name: Generate Claude Code instructions
+        if: steps.tests.outcome == 'failure'
+        run: |
+          python3 scripts/generate_claude_instructions.py \
+            --test-report tests/reports/visual-report.json \
+            --output claude-instructions.txt
+
+      - name: Upload screenshots and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-test-artifacts
+          path: |
+            tests/visual/screenshots/
+            tests/reports/visual-report.html
+            claude-instructions.txt
+
+      - name: Send Slack notification
+        if: steps.tests.outcome == 'failure'
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"🚨 *PermitIndex Daily Visual Tests Failed*\n\nTest report has been generated. Check the workflow artifacts for details.\n\nWorkflow: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+            ${{ secrets.SLACK_WEB_HOOK }}

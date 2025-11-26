@@ -1,0 +1,86 @@
+<!-- Premium Historic Data Widget for Permit Pages -->
+<div class="rounded-lg p-6 border-2" style="background: white; border-color: var(--border);">
+    <div class="flex items-start justify-between mb-4">
+        <div class="flex items-center">
+            <svg class="w-8 h-8 mr-3" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <div>
+                <h3 class="text-xl font-bold" style="color: var(--primary);">Change History</h3>
+                <p class="text-sm" style="color: var(--text-light);">Last updated: {{ last_updated }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Locked Preview Box -->
+    <div class="p-6 rounded-lg border-2 border-dashed mb-4" style="background: var(--bg-light); border-color: var(--border);">
+        <div class="flex items-center justify-center mb-4">
+            <svg class="w-12 h-12" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+        </div>
+
+        <h4 class="text-lg font-bold text-center mb-3" style="color: var(--text);">Unlock 2+ Years of Change History</h4>
+
+        <ul class="space-y-2 text-sm" style="color: var(--text-light);">
+            <li class="flex items-start">
+                <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" style="color: var(--success);" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>See exactly what changed and when</span>
+            </li>
+            <li class="flex items-start">
+                <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" style="color: var(--success);" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Track cost increases over time</span>
+            </li>
+            <li class="flex items-start">
+                <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" style="color: var(--success);" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Compare old vs new requirements</span>
+            </li>
+            <li class="flex items-start">
+                <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" style="color: var(--success);" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Export historic data to CSV</span>
+            </li>
+        </ul>
+    </div>
+
+    <button
+        class="w-full px-6 py-3 rounded-lg font-semibold transition"
+        style="background: var(--primary); color: white;"
+        onmouseover="this.style.opacity='0.9'"
+        onmouseout="this.style.opacity='1'"
+        onclick="handleHistoricDataClick()"
+    >
+        Upgrade to Pro • $39/mo
+    </button>
+
+    <p class="text-xs text-center mt-3" style="color: var(--text-light);">
+        <a href="/pricing/" style="color: var(--primary); text-decoration: underline;">Learn more about Pro features</a>
+    </p>
+</div>
+
+<script>
+function handleHistoricDataClick() {
+    const permitName = '{{ request_type }}';
+
+    // Track the click
+    if (typeof plausible !== 'undefined') {
+        plausible('Historic Data CTA Click', {
+            props: {
+                permit: '{{ permit_slug }}',
+                source: 'permit-page'
+            }
+        });
+    }
+
+    // Redirect to coming soon page
+    const redirectUrl = '/coming-soon/?feature=historic-data&permit=' + encodeURIComponent(permitName);
+    window.location.href = redirectUrl;
+}
+</script>

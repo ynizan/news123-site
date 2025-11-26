@@ -1,0 +1,8 @@
+permit_slug,feedback_type,feedback_text,helpful_count,created_at,approved,github_issue_number
+food-truck-operating-permit,tip,Make sure to schedule your inspection at least 2 weeks in advance - they book up fast!,5,2024-01-15,yes,123
+food-truck-operating-permit,common_mistake,Don't forget to include your vehicle VIN on the application - common rejection reason,12,2024-01-16,yes,124
+food-truck-operating-permit,time_estimate,"The whole process took me 6 weeks from start to finish, not the 4-6 weeks advertised",8,2024-01-18,yes,125
+business-license,tip,File online - it's much faster than mail. Got approved in 3 business days!,15,2024-01-20,yes,126
+business-license,cost_note,Total cost for LLC in San Francisco was $870 ($70 state + $800 city fee),9,2024-01-22,yes,127
+contractor-license,tip,Join a study group for the exams - passing rate is much higher with group prep,22,2024-01-25,yes,128
+contractor-license,common_mistake,Don't underestimate the Law & Business exam - it's harder than most trade exams,18,2024-01-26,yes,129

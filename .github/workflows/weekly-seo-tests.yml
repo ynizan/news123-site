@@ -1,0 +1,59 @@
+name: Weekly SEO & Integration Tests
+
+on:
+  schedule:
+    - cron: '0 10 * * 0'  # 10 AM UTC on Sundays
+  workflow_dispatch:
+
+jobs:
+  seo-and-integration-tests:
+    runs-on: ubuntu-22.04  # Use 22.04 for better package compatibility
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Install Playwright browsers
+        run: |
+          python -m playwright install --with-deps chromium
+
+      - name: Run SEO tests
+        id: seo_tests
+        continue-on-error: true
+        run: |
+          pytest tests/seo/ tests/integration/ tests/analytics/ \
+            --json-report \
+            --json-report-file=tests/reports/weekly-report.json \
+            --html=tests/reports/weekly-report.html \
+            --self-contained-html
+
+      - name: Generate Claude Code instructions
+        if: steps.seo_tests.outcome == 'failure'
+        run: |
+          python3 scripts/generate_claude_instructions.py \
+            --test-report tests/reports/weekly-report.json \
+            --output claude-instructions.txt
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-test-report
+          path: |
+            tests/reports/
+            claude-instructions.txt
+
+      - name: Send Slack notification
+        if: steps.seo_tests.outcome == 'failure'
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"🚨 *PermitIndex Weekly SEO Tests Failed*\n\nTest report has been generated. Check the workflow artifacts for details.\n\nWorkflow: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+            ${{ secrets.SLACK_WEB_HOOK }}

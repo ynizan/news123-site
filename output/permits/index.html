@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon - comprehensive browser support -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64x64.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <!-- Theme colors -->
+    <meta name="theme-color" content="#003366">
+    <meta name="msapplication-TileColor" content="#003366">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+
+    <!-- Primary Meta Tags -->
+    <title>All Permit Types - Browse Government Permits by Type | PermitIndex</title>
+    <meta name="title" content="All Permit Types - Browse Government Permits by Type | PermitIndex">
+    <meta name="description" content="Browse 2 types of government permits and licenses available across the United States. Find requirements, costs, and locations for every permit type.">
+    <meta name="keywords" content="permit types, license types, government permits, business permits, construction permits">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://permitindex.com/permits/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://permitindex.com/permits/">
+    <meta property="og:title" content="All Permit Types - Browse Government Permits by Type | PermitIndex">
+    <meta property="og:description" content="Browse 2 types of government permits and licenses available across the United States.">
+    <meta property="og:image" content="https://permitindex.com/og-image.png">
+    <meta property="og:site_name" content="PermitIndex">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://permitindex.com/permits/">
+    <meta name="twitter:title" content="All Permit Types - Browse Government Permits by Type | PermitIndex">
+    <meta name="twitter:description" content="Browse 2 types of government permits and licenses available across the United States.">
+    <meta name="twitter:image" content="https://permitindex.com/og-image.png">
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-ag6g5Gg1btKfcdZ4oA-vo.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PermitIndex Brand Styles -->
+    <style>
+        :root {
+            --primary: #003366;
+            --accent: #FF6B35;
+            --text: #1a1a1a;
+            --text-light: #666666;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --border: #e0e0e0;
+            --success: #10b981;
+        }
+
+        body {
+            background: var(--bg-light);
+            color: var(--text);
+        }
+
+        h1, h2 {
+            font-family: 'Arial Black', sans-serif;
+            font-weight: 900;
+            letter-spacing: -1px;
+            color: var(--primary);
+        }
+
+        .star-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .star-box::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: 18px;
+            width: 18px;
+            height: 18px;
+            background: var(--bg-light);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .star-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--accent);
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .star-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .star-button::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: 12px;
+            width: 12px;
+            height: 12px;
+            background: var(--bg-light);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        #searchBox {
+            border: 2px solid var(--border);
+        }
+
+        #searchBox:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        /* Search results dropdown */
+        #searchResults a {
+            display: block;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        #searchResults a:hover,
+        #searchResults a.highlighted {
+            background: var(--bg-light);
+        }
+
+        #searchResults a:last-child {
+            border-bottom: none;
+        }
+
+        #searchResults .result-name {
+            font-weight: 600;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        #searchResults .result-meta {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+    </style>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://permitindex.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "All Permit Types",
+        "item": "https://permitindex.com/permits/"
+      }]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header style="background: var(--bg); box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-bottom: 1px solid var(--border);">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg" style="height: 32px;">
+                            <defs>
+                                <mask id="p-star-mask">
+                                    <rect width="100%" height="100%" fill="white"/>
+                                    <polygon points="20,2 21.5,6 25.5,6 22.2,8.5 23.5,12.5 20,9.8 16.5,12.5 17.8,8.5 14.5,6 18.5,6" fill="black"/>
+                                </mask>
+                            </defs>
+                            <g fill="var(--primary)" font-family="Arial Black, sans-serif" font-weight="900">
+                                <text x="0" y="32" font-size="36" letter-spacing="-1" mask="url(#p-star-mask)">P</text>
+                                <text x="25" y="32" font-size="36" letter-spacing="-1">ermitIndex</text>
+                            </g>
+                        </svg>
+                    </a>
+                    <p class="text-sm" style="color: var(--text-light);">Complete Database of US Government Transactions</p>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" style="color: var(--text-light);">Home</a>
+                    <a href="/permits/" style="color: var(--primary); font-weight: 600;">Permit Types</a>
+                    <a href="/pricing/" style="color: var(--text-light);">Pricing</a>
+                    <a href="/about" style="color: var(--text-light);">About</a>
+                    <a href="/contact" style="color: var(--text-light);">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 py-4">
+        <nav class="text-sm" style="color: var(--text-light);">
+            <a href="/" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Home</a>
+            <span class="mx-2">›</span>
+            <span style="color: var(--text);">All Permit Types</span>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Page Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">All Permit Types</h1>
+            <p class="text-xl md:text-2xl mb-8" style="color: var(--text-light);">Browse 2 types of government permits and licenses available across 100 jurisdictions</p>
+        </div>
+
+        <!-- Search Box -->
+        <div class="max-w-2xl mx-auto mb-12">
+            <div class="relative">
+                <input
+                    type="text"
+                    id="searchBox"
+                    placeholder="Search permit types..."
+                    class="w-full px-6 py-4 rounded-lg text-lg"
+                    autocomplete="off"
+                    aria-label="Search permit types"
+                    aria-expanded="false"
+                >
+                <svg class="w-6 h-6 absolute right-4 top-1/2 transform -translate-y-1/2" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <!-- Autocomplete Dropdown -->
+                <div id="searchResults" class="hidden absolute w-full mt-2 rounded-lg shadow-xl overflow-hidden z-10" style="background: var(--bg); border: 2px solid var(--border); max-height: 400px; overflow-y: auto;"></div>
+            </div>
+        </div>
+
+        <!-- Permit Types Grid -->
+        <div id="permitTypesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <a href="/permits/apply-for-a-business-license/" class="permit-type-card star-box p-6 hover:shadow-xl transition" style="text-decoration: none;" data-name="apply for a business license">
+                <div class="flex items-start justify-between mb-3">
+                    <span style="background: var(--accent); color: white;" class="inline-block px-3 py-1 text-xs font-semibold rounded-full">
+                        99 locations
+                    </span>
+                    
+                    <span style="background: var(--success); color: white;" class="inline-block px-2 py-1 text-xs font-semibold rounded-full">
+                        100% online
+                    </span>
+                    
+                </div>
+                <h3 class="text-xl font-bold mb-2" style="color: var(--text);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text)'">Apply for a business license</h3>
+                <p class="text-sm mb-4" style="color: var(--text-light);">This applies to any individual or entity conducting business within Anchorage city limits, including...</p>
+                <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                        <div style="color: var(--text-light);">Average Cost</div>
+                        <div class="font-semibold" style="color: var(--text);">$420</div>
+                    </div>
+                    <div>
+                        <div style="color: var(--text-light);">Locations</div>
+                        <div class="font-semibold" style="color: var(--text);">99</div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="/permits/apply-for-a-business-privilege-license/" class="permit-type-card star-box p-6 hover:shadow-xl transition" style="text-decoration: none;" data-name="apply for a business privilege license">
+                <div class="flex items-start justify-between mb-3">
+                    <span style="background: var(--accent); color: white;" class="inline-block px-3 py-1 text-xs font-semibold rounded-full">
+                        1 location
+                    </span>
+                    
+                    <span style="background: var(--success); color: white;" class="inline-block px-2 py-1 text-xs font-semibold rounded-full">
+                        100% online
+                    </span>
+                    
+                </div>
+                <h3 class="text-xl font-bold mb-2" style="color: var(--text);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text)'">Apply for a Business Privilege License</h3>
+                <p class="text-sm mb-4" style="color: var(--text-light);">This license is required for any individual or entity conducting business within Philadelphia. It co...</p>
+                <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                        <div style="color: var(--text-light);">Average Cost</div>
+                        <div class="font-semibold" style="color: var(--text);">$275</div>
+                    </div>
+                    <div>
+                        <div style="color: var(--text-light);">Locations</div>
+                        <div class="font-semibold" style="color: var(--text);">1</div>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+
+        <!-- No Results Message -->
+        <div id="noResults" class="hidden text-center py-12">
+            <svg class="w-16 h-16 mx-auto mb-4" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <h3 class="text-xl font-bold mb-2">No permit types found</h3>
+            <p style="color: var(--text-light);">Try a different search term</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16" style="background: #1a1a1a; color: #d1d5db;">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4" style="color: white;">PermitIndex</h3>
+                    <p class="text-sm">Complete Database of US Government Transactions</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/pricing/">Pricing</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/permits/">Browse Permit Types</a></li>
+                        <li><a href="/states">Browse by State</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 text-sm text-center" style="border-top: 1px solid #333;">
+                <p>&copy; 2024 PermitIndex. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Functionality -->
+    <script>
+    (function() {
+        'use strict';
+
+        // Build permit types data from the page
+        const permitCards = document.querySelectorAll('.permit-type-card');
+        const permitTypesData = [];
+
+        permitCards.forEach(card => {
+            const name = card.getAttribute('data-name');
+            const href = card.getAttribute('href');
+            const locationBadge = card.querySelector('.inline-block');
+            const avgCostDiv = card.querySelectorAll('.font-semibold')[0];
+
+            permitTypesData.push({
+                name: name,
+                display_name: card.querySelector('h3').textContent.trim(),
+                locations: locationBadge ? locationBadge.textContent.trim() : '',
+                avg_cost: avgCostDiv ? avgCostDiv.textContent.trim() : '',
+                href: href
+            });
+        });
+
+        const searchBox = document.getElementById('searchBox');
+        const searchResults = document.getElementById('searchResults');
+        const permitTypesGrid = document.getElementById('permitTypesGrid');
+        const noResults = document.getElementById('noResults');
+        let currentHighlight = -1;
+
+        // Search with autocomplete dropdown
+        let searchTimeout;
+        searchBox.addEventListener('input', function(e) {
+            clearTimeout(searchTimeout);
+            const query = e.target.value.trim().toLowerCase();
+
+            searchTimeout = setTimeout(() => {
+                if (query.length === 0) {
+                    hideSearchResults();
+                    showAllCards();
+                    return;
+                }
+
+                // Filter permit types
+                const matches = permitTypesData.filter(permit =>
+                    permit.name.includes(query) || permit.display_name.toLowerCase().includes(query)
+                );
+
+                displaySearchResults(matches, query);
+            }, 150);
+        });
+
+        // Display search results dropdown
+        function displaySearchResults(matches, query) {
+            if (matches.length === 0) {
+                searchResults.innerHTML = '<div style="padding: 16px 20px; color: var(--text-light);">No permit types found</div>';
+                searchResults.classList.remove('hidden');
+                searchBox.setAttribute('aria-expanded', 'true');
+                hideAllCards();
+                noResults.classList.remove('hidden');
+                return;
+            }
+
+            // Limit to 8 results in dropdown
+            const limitedMatches = matches.slice(0, 8);
+
+            searchResults.innerHTML = limitedMatches.map(permit => `
+                <a href="${permit.href}">
+                    <span class="result-name">${highlightMatch(permit.display_name, query)}</span>
+                    <span class="result-meta">${permit.locations} · ${permit.avg_cost}</span>
+                </a>
+            `).join('');
+
+            searchResults.classList.remove('hidden');
+            searchBox.setAttribute('aria-expanded', 'true');
+            currentHighlight = -1;
+
+            // Also filter the grid
+            filterGrid(query);
+        }
+
+        // Filter the main grid
+        function filterGrid(query) {
+            let visibleCount = 0;
+
+            permitCards.forEach(card => {
+                const name = card.getAttribute('data-name');
+                const displayName = card.querySelector('h3').textContent.toLowerCase();
+
+                if (name.includes(query) || displayName.includes(query)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        // Highlight matching text
+        function highlightMatch(text, query) {
+            const index = text.toLowerCase().indexOf(query);
+            if (index === -1) return text;
+
+            const before = text.substring(0, index);
+            const match = text.substring(index, index + query.length);
+            const after = text.substring(index + query.length);
+
+            return `${before}<strong>${match}</strong>${after}`;
+        }
+
+        // Hide search results dropdown
+        function hideSearchResults() {
+            searchResults.classList.add('hidden');
+            searchBox.setAttribute('aria-expanded', 'false');
+            currentHighlight = -1;
+            noResults.classList.add('hidden');
+        }
+
+        // Show all cards
+        function showAllCards() {
+            permitCards.forEach(card => {
+                card.style.display = 'block';
+            });
+            noResults.classList.add('hidden');
+        }
+
+        // Hide all cards
+        function hideAllCards() {
+            permitCards.forEach(card => {
+                card.style.display = 'none';
+            });
+        }
+
+        // Keyboard navigation
+        searchBox.addEventListener('keydown', function(e) {
+            const results = searchResults.querySelectorAll('a');
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                currentHighlight = Math.min(currentHighlight + 1, results.length - 1);
+                updateHighlight(results);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                currentHighlight = Math.max(currentHighlight - 1, -1);
+                updateHighlight(results);
+            } else if (e.key === 'Enter' && currentHighlight >= 0 && results[currentHighlight]) {
+                e.preventDefault();
+                results[currentHighlight].click();
+            } else if (e.key === 'Escape') {
+                hideSearchResults();
+                showAllCards();
+                searchBox.blur();
+            }
+        });
+
+        function updateHighlight(results) {
+            results.forEach((result, index) => {
+                if (index === currentHighlight) {
+                    result.classList.add('highlighted');
+                    result.scrollIntoView({ block: 'nearest' });
+                } else {
+                    result.classList.remove('highlighted');
+                }
+            });
+        }
+
+        // Click outside to close
+        document.addEventListener('click', function(e) {
+            if (!searchBox.contains(e.target) && !searchResults.contains(e.target)) {
+                hideSearchResults();
+                if (searchBox.value.trim() === '') {
+                    showAllCards();
+                }
+            }
+        });
+
+        // Track search analytics
+        searchBox.addEventListener('input', function(e) {
+            if (e.target.value.length > 2 && typeof plausible !== 'undefined') {
+                plausible('Permit Type Search', {
+                    props: {
+                        query_length: e.target.value.length
+                    }
+                });
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

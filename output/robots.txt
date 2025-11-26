@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://news123.com/sitemap.xml

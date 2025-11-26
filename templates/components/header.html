@@ -1,0 +1,26 @@
+<!-- Standardized Header Component -->
+<header style="background: var(--bg); box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-bottom: 1px solid var(--border);">
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+            <div>
+                <a href="/" class="logo">
+                    <svg viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="News123">
+                        <title>News123</title>
+                        <desc>News123 - Your Daily News Aggregator</desc>
+                        <g fill="var(--primary)" font-family="Arial Black, sans-serif" font-weight="900">
+                            <text x="0" y="32" font-size="36" letter-spacing="-1">News</text>
+                            <text x="100" y="32" font-size="36" letter-spacing="-1" fill="var(--accent)">123</text>
+                        </g>
+                    </svg>
+                </a>
+                <p class="text-sm" style="color: var(--text-light);">Your Daily News Aggregator</p>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="/" style="color: var(--text-light);" class="font-medium" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Home</a>
+                <a href="/categories/" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Categories</a>
+                <a href="/about" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">About</a>
+                <a href="/contact" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Contact</a>
+            </nav>
+        </div>
+    </div>
+</header>

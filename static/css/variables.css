@@ -1,0 +1,154 @@
+/**
+ * News123 Brand Color System
+ * Version: 1.0
+ * Last Updated: November 2024
+ *
+ * This file defines the official News123 color palette.
+ * All templates should use these CSS variables instead of hardcoded colors for consistency.
+ */
+
+:root {
+    /* ========================================
+       PRIMARY COLORS
+       ======================================== */
+
+    /**
+     * Primary Dark Blue - #1a1a2e
+     * Usage: Logo, headers, primary buttons, links, borders
+     * Represents: Authority, trust, professionalism
+     */
+    --primary: #1a1a2e;
+    --primary-rgb: 26, 26, 46;
+
+    /**
+     * Accent Red/Pink - #e94560
+     * Usage: Call-to-action buttons, breaking news, highlights, category badges
+     * Represents: Urgency, importance, attention
+     * Use sparingly - for CTAs and highlights only!
+     */
+    --accent: #e94560;
+    --accent-rgb: 233, 69, 96;
+
+
+    /* ========================================
+       TEXT COLORS
+       ======================================== */
+
+    /**
+     * Text Dark - #1a1a1a
+     * Usage: Body text, headings, primary content
+     * Provides excellent readability and contrast
+     */
+    --text: #1a1a1a;
+    --text-rgb: 26, 26, 26;
+
+    /**
+     * Text Light - #666666
+     * Usage: Secondary text, meta information, labels, timestamps
+     * Use for less important text that still needs to be readable
+     */
+    --text-light: #666666;
+    --text-light-rgb: 102, 102, 102;
+
+
+    /* ========================================
+       BACKGROUND COLORS
+       ======================================== */
+
+    /**
+     * Background White - #FFFFFF
+     * Usage: Card backgrounds, content boxes, article backgrounds
+     * Primary background for content containers
+     */
+    --bg: #ffffff;
+    --bg-rgb: 255, 255, 255;
+
+    /**
+     * Background Light - #F8F9FA
+     * Usage: Page backgrounds, subtle separations, alternating rows
+     * Provides subtle contrast with white content boxes
+     */
+    --bg-light: #f8f9fa;
+    --bg-light-rgb: 248, 249, 250;
+
+
+    /* ========================================
+       BORDER COLORS
+       ======================================== */
+
+    /**
+     * Border - #E0E0E0
+     * Usage: Borders, dividers, separators
+     * Subtle enough to not distract, visible enough to separate content
+     */
+    --border: #e0e0e0;
+    --border-rgb: 224, 224, 224;
+
+
+    /* ========================================
+       STATUS COLORS
+       ======================================== */
+
+    /**
+     * Success Green - #10B981
+     * Usage: Success messages, verified badges, positive indicators
+     */
+    --success: #10b981;
+    --success-rgb: 16, 185, 129;
+
+    /**
+     * Warning Yellow - #F59E0B
+     * Usage: Warning messages, caution indicators
+     */
+    --warning: #F59E0B;
+    --warning-rgb: 245, 158, 11;
+
+    /**
+     * Error Red - #EF4444
+     * Usage: Error messages, validation failures, critical alerts
+     */
+    --error: #EF4444;
+    --error-rgb: 239, 68, 68;
+
+    /**
+     * Breaking News - same as accent
+     * Usage: Breaking news banners, urgent alerts
+     */
+    --breaking: #e94560;
+    --breaking-rgb: 233, 69, 96;
+
+
+    /* ========================================
+       TYPOGRAPHY
+       ======================================== */
+
+    /**
+     * Display Font - Arial Black
+     * Usage: Logo, headings (H1-H2), emphasis
+     */
+    --font-display: 'Arial Black', 'Helvetica Bold', sans-serif;
+
+    /**
+     * Body Font - System Font Stack
+     * Usage: Body text, paragraphs, UI elements
+     */
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+
+    /* ========================================
+       SPACING & SIZING
+       ======================================== */
+
+    --radius-large: 12px;
+    --radius-medium: 8px;
+    --radius-small: 6px;
+
+
+    /* ========================================
+       SHADOWS (Elevation System)
+       ======================================== */
+
+    --shadow-low: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --shadow-high: 0 8px 24px rgba(0, 0, 0, 0.15);
+}

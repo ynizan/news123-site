@@ -1,0 +1,109 @@
+name: Approve User Feedback
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  approve-feedback:
+    if: github.event.label.name == 'approved'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Parse issue and add to CSV
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_CREATED: ${{ github.event.issue.created_at }}
+        run: |
+          python3 << 'PYTHON_SCRIPT'
+          import os
+          import csv
+          import re
+          from datetime import datetime
+
+          issue_body = os.environ['ISSUE_BODY']
+          issue_number = os.environ['ISSUE_NUMBER']
+          created_at = os.environ['ISSUE_CREATED'][:10]  # Get just the date
+
+          # Parse issue body
+          permit_match = re.search(r'\*\*Permit:\*\*\s*(.+)', issue_body)
+          type_match = re.search(r'\*\*Type:\*\*\s*(.+)', issue_body)
+          feedback_match = re.search(r'\*\*Feedback:\*\*\s*(.+)', issue_body, re.DOTALL)
+
+          if not all([permit_match, type_match, feedback_match]):
+              print("Error: Could not parse issue body")
+              exit(1)
+
+          permit_slug = permit_match.group(1).strip()
+          feedback_type = type_match.group(1).strip()
+          feedback_text = feedback_match.group(1).strip()
+
+          # Validate feedback_type
+          valid_types = ['tip', 'common_mistake', 'time_estimate', 'cost_note']
+          if feedback_type not in valid_types:
+              print(f"Error: Invalid feedback type: {feedback_type}")
+              exit(1)
+
+          # Check if already exists
+          csv_file = 'data/feedback/user_feedback.csv'
+          exists = False
+
+          if os.path.exists(csv_file):
+              with open(csv_file, 'r', encoding='utf-8') as f:
+                  reader = csv.DictReader(f)
+                  for row in reader:
+                      if row['github_issue_number'] == issue_number:
+                          exists = True
+                          print(f"Feedback from issue #{issue_number} already exists in CSV")
+                          break
+
+          if not exists:
+              # Add to CSV with approved='yes'
+              with open(csv_file, 'a', newline='', encoding='utf-8') as f:
+                  writer = csv.writer(f)
+                  writer.writerow([
+                      permit_slug,
+                      feedback_type,
+                      feedback_text,
+                      0,  # helpful_count
+                      created_at,
+                      'yes',  # approved
+                      issue_number
+                  ])
+              print(f"✅ Added approved feedback from issue #{issue_number}")
+          PYTHON_SCRIPT
+
+      - name: Commit approval
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add data/feedback/user_feedback.csv
+          git commit -m "Approve feedback from issue #${{ github.event.issue.number }}" || echo "No changes to commit"
+          git pull --rebase origin main
+          git push
+
+      - name: Close issue
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.update({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'closed'
+            });
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ This feedback has been approved and will appear on the website after the next build (2-3 minutes).'
+            })

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+
+    <!-- Primary Meta Tags -->
+    <title>Contact Us - PermitIndex</title>
+    <meta name="title" content="Contact Us - PermitIndex">
+    <meta name="description" content="Get in touch with PermitIndex. We're here to help with questions about permits, suggest new features, or report data issues.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://permitindex.com/contact">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://permitindex.com/contact">
+    <meta property="og:title" content="Contact Us - PermitIndex">
+    <meta property="og:description" content="Get in touch with PermitIndex.">
+    <meta property="og:image" content="https://permitindex.com/og-image.png">
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-ag6g5Gg1btKfcdZ4oA-vo.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PermitIndex Brand Styles -->
+    <style>
+        :root {
+            --primary: #003366;
+            --accent: #FF6B35;
+            --text: #1a1a1a;
+            --text-light: #666666;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --border: #e0e0e0;
+            --success: #10b981;
+            --error: #ef4444;
+            --font-display: 'Arial Black', 'Helvetica Bold', sans-serif;
+            --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --radius-large: 12px;
+            --radius-medium: 8px;
+            --shadow-low: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-medium: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        body {
+            background: var(--bg-light);
+            color: var(--text);
+            font-family: var(--font-body);
+        }
+
+        h1, h2 {
+            font-family: var(--font-display);
+            font-weight: 900;
+            letter-spacing: -1px;
+            color: var(--primary);
+        }
+
+        .star-box {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius-large);
+            position: relative;
+            box-shadow: var(--shadow-low);
+        }
+
+        .star-box::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: 18px;
+            width: 18px;
+            height: 18px;
+            background: var(--bg-light);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .star-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: var(--radius-medium);
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .star-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .star-button::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: 12px;
+            width: 12px;
+            height: 12px;
+            background: var(--bg-light);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-medium);
+            font-size: 15px;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .alert {
+            padding: 16px;
+            border-radius: var(--radius-medium);
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .alert.success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #10b981;
+        }
+
+        .alert.error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #ef4444;
+        }
+
+        .alert.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header style="background: var(--bg); box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-bottom: 1px solid var(--border);">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PermitIndex" style="height: 32px; width: auto;">
+                            <title>PermitIndex</title>
+                            <defs>
+                                <mask id="p-star-mask">
+                                    <rect width="100%" height="100%" fill="white"/>
+                                    <polygon points="20,2 21.5,6 25.5,6 22.2,8.5 23.5,12.5 20,9.8 16.5,12.5 17.8,8.5 14.5,6 18.5,6" fill="black"/>
+                                </mask>
+                            </defs>
+                            <g fill="var(--primary)" font-family="Arial Black, sans-serif" font-weight="900">
+                                <text x="0" y="32" font-size="36" letter-spacing="-1" mask="url(#p-star-mask)">P</text>
+                                <text x="25" y="32" font-size="36" letter-spacing="-1">ermitIndex</text>
+                            </g>
+                        </svg>
+                    </a>
+                    <p class="text-sm" style="color: var(--text-light);">Complete Database of US Government Transactions</p>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" style="color: var(--text-light);" class="font-medium" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Home</a>
+                    <a href="/pricing/" style="color: var(--text-light);" onmouseover="this.style.color=\'var(--primary)\'" onmouseout="this.style.color=\'var(--text-light)\'">Pricing</a>
+                    <a href="/about" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">About</a>
+                    <a href="/contact" style="color: var(--primary);" class="font-medium">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16">
+        <div class="max-w-3xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-5xl font-bold mb-4">Contact Us</h1>
+                <p class="text-xl" style="color: var(--text-light);">We're here to help! Send us a message and we'll get back to you soon.</p>
+            </div>
+
+            <!-- Success/Error Messages -->
+            <div id="successAlert" class="alert success">
+                <strong>✓ Message sent!</strong> We've received your message and will respond shortly.
+            </div>
+            <div id="errorAlert" class="alert error">
+                <strong>✗ Error:</strong> <span id="errorMessage">Something went wrong. Please try again.</span>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="star-box">
+                <form id="contactForm" onsubmit="submitContactForm(event)">
+                    <div class="mb-6">
+                        <label class="form-label" for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" required placeholder="John Doe">
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="form-label" for="email">Your Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" required placeholder="john@example.com">
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="form-label" for="subject">Subject *</label>
+                        <select id="subject" name="subject" class="form-input" required>
+                            <option value="">Select a topic...</option>
+                            <option value="general">General Question</option>
+                            <option value="data-issue">Report Data Issue</option>
+                            <option value="feature-request">Feature Request</option>
+                            <option value="permit-request">Request New Permit</option>
+                            <option value="contributor">Become a Contributor</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="form-label" for="message">Message *</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="6" required placeholder="Tell us how we can help..."></textarea>
+                    </div>
+
+                    <button type="submit" class="star-button w-full md:w-auto" id="submitBtn">
+                        <span id="submitText">Send Message</span>
+                        <span id="submitLoading" style="display: none;">Sending...</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Alternative Contact Methods -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center p-6 rounded-lg" style="background: white; border: 2px solid var(--border);">
+                    <svg class="w-8 h-8 mx-auto mb-3" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <h3 class="font-bold mb-2">Email</h3>
+                    <p class="text-sm" style="color: var(--text-light);">For general inquiries</p>
+                </div>
+
+                <div class="text-center p-6 rounded-lg" style="background: white; border: 2px solid var(--border);">
+                    <svg class="w-8 h-8 mx-auto mb-3" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <h3 class="font-bold mb-2">Documentation</h3>
+                    <p class="text-sm" style="color: var(--text-light);">Check our <a href="/faq" style="color: var(--primary);">FAQ page</a></p>
+                </div>
+
+                <div class="text-center p-6 rounded-lg" style="background: white; border: 2px solid var(--border);">
+                    <svg class="w-8 h-8 mx-auto mb-3" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <h3 class="font-bold mb-2">Contribute</h3>
+                    <p class="text-sm" style="color: var(--text-light);">Help us <a href="/contribute/" style="color: var(--primary);">improve data</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16" style="background: #1a1a1a; color: #d1d5db;">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4" style="color: white;">PermitIndex</h3>
+                    <p class="text-sm">Complete Database of US Government Transactions</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">About</a></li>
+                        <li><a href="/pricing/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Pricing</a></li>
+                        <li><a href="/contributors/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Contributors</a></li>
+                        <li><a href="/contribute/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Become a Contributor</a></li>
+                        <li><a href="/contact" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/states" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Browse by State</a></li>                        <li><a href="/faq" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/privacy" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Privacy Policy</a></li>
+                        <li><a href="/terms" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 text-sm text-center" style="border-top: 1px solid #333;">
+                <p>&copy; 2024 PermitIndex. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Form JavaScript -->
+    <script>
+        async function submitContactForm(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const submitText = document.getElementById('submitText');
+            const submitLoading = document.getElementById('submitLoading');
+            const successAlert = document.getElementById('successAlert');
+            const errorAlert = document.getElementById('errorAlert');
+
+            // Hide alerts
+            successAlert.classList.remove('show');
+            errorAlert.classList.remove('show');
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitText.style.display = 'none';
+            submitLoading.style.display = 'inline';
+
+            // Get form data
+            const formData = new FormData(form);
+
+            try {
+                // POST to Formspree
+                const response = await fetch('https://formspree.io/f/mjklwdyj', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Success
+                    successAlert.classList.add('show');
+                    form.reset();
+
+                    // Track with Plausible
+                    if (typeof plausible !== 'undefined') {
+                        plausible('Contact Form Submitted', {
+                            props: { subject: formData.get('subject') }
+                        });
+                    }
+                } else {
+                    throw new Error('Server error');
+                }
+            } catch (error) {
+                // Error
+                document.getElementById('errorMessage').textContent =
+                    'Unable to send message. Please try again or email us directly.';
+                errorAlert.classList.add('show');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                submitText.style.display = 'inline';
+                submitLoading.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

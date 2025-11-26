@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports News - News123</title>
+    <meta name="description" content="Latest Sports news and articles from News123.">
+    <link rel="canonical" href="https://news123.com/category/sports/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --accent: #e94560;
+            --text: #1a1a1a;
+            --text-light: #666666;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --border: #e0e0e0;
+            --radius-large: 12px;
+            --radius-medium: 8px;
+            --shadow-medium: 0 4px 16px rgba(0,0,0,0.1);
+        }
+        body { background: var(--bg-light); color: var(--text); }
+        h1, h2 { font-family: 'Arial Black', sans-serif; color: var(--primary); }
+        .news-card {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-large);
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        .news-card:hover {
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-2px);
+        }
+        .category-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--accent);
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <!-- Standardized Header Component -->
+<header style="background: var(--bg); box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-bottom: 1px solid var(--border);">
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+            <div>
+                <a href="/" class="logo">
+                    <svg viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="News123">
+                        <title>News123</title>
+                        <desc>News123 - Your Daily News Aggregator</desc>
+                        <g fill="var(--primary)" font-family="Arial Black, sans-serif" font-weight="900">
+                            <text x="0" y="32" font-size="36" letter-spacing="-1">News</text>
+                            <text x="100" y="32" font-size="36" letter-spacing="-1" fill="var(--accent)">123</text>
+                        </g>
+                    </svg>
+                </a>
+                <p class="text-sm" style="color: var(--text-light);">Your Daily News Aggregator</p>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="/" style="color: var(--text-light);" class="font-medium" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Home</a>
+                <a href="/categories/" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Categories</a>
+                <a href="/about" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">About</a>
+                <a href="/contact" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Contact</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold mb-2">Sports</h1>
+            <p class="text-lg mb-8" style="color: var(--text-light);">1 articles</p>
+
+            <div class="grid gap-6">
+                
+                <a href="/sports/championship-finals-dramatic-semifinal-victories/" class="news-card block" style="text-decoration: none;">
+                    <span class="category-badge">Sports</span>
+                    <h2 class="text-xl font-bold mt-3 mb-2" style="color: var(--primary);">Championship Finals Set After Dramatic Semifinal Victories</h2>
+                    <p class="text-sm mb-2" style="color: var(--text-light);">Sports Central &bull; November 21, 2024</p>
+                    <p style="color: var(--text-light);">Both semifinal matches went to overtime in what fans are calling the most exciting playoffs in years.</p>
+                </a>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Standardized Footer Component -->
+<footer class="mt-16" style="background: #1a1a1a; color: #d1d5db;">
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="font-bold text-lg mb-4" style="color: white;">News123</h3>
+                <p class="text-sm">Your Daily News Aggregator</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4" style="color: white;">Company</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/about" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">About</a></li>
+                    <li><a href="/contact" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4" style="color: white;">Browse</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/categories/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Categories</a></li>
+                    <li><a href="/faq" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4" style="color: white;">Legal</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/privacy" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Privacy Policy</a></li>
+                    <li><a href="/terms" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 text-sm text-center" style="border-top: 1px solid #333;">
+            <p>&copy; 2024 News123. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

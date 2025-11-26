@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+
+    <!-- Meta Tags -->
+    <title>Pricing - PermitIndex Premium Plans</title>
+    <meta name="title" content="Pricing - PermitIndex Premium Plans">
+    <meta name="description" content="Choose the PermitIndex plan that's right for you. From free browsing to Enterprise API access, we have a solution for every need.">
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-ag6g5Gg1btKfcdZ4oA-vo.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+
+    <!-- Track pricing page view -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof plausible !== 'undefined') {
+          plausible('Pricing Page View');
+        }
+      });
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PermitIndex Brand Styles -->
+    <style>
+        :root {
+            --primary: #003366;
+            --accent: #FF6B35;
+            --text: #1a1a1a;
+            --text-light: #666666;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --border: #e0e0e0;
+            --success: #10b981;
+        }
+
+        body {
+            background: var(--bg-light);
+            color: var(--text);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Arial Black', 'Helvetica Bold', sans-serif;
+            font-weight: 900;
+            letter-spacing: -1px;
+            color: var(--primary);
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            border: 2px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .pricing-card.popular {
+            border-color: var(--accent);
+            position: relative;
+        }
+
+        .pricing-card.popular::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 4px 16px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .pricing-card.enterprise {
+            background: linear-gradient(135deg, var(--primary) 0%, #004d99 100%);
+            color: white;
+        }
+
+        .pricing-card.enterprise h3,
+        .pricing-card.enterprise .price {
+            color: white;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--accent);
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        .cta-button.secondary {
+            background: var(--primary);
+        }
+
+        .cta-button.outline {
+            background: white;
+            color: var(--primary);
+            border: 2px solid white;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: start;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    {% include 'components/header.html' %}
+
+    <!-- Hero Section -->
+    <section class="py-20" style="background: linear-gradient(135deg, var(--primary) 0%, #004d99 100%);">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6" style="color: white;">Government Permit Intelligence Platform</h1>
+            <p class="text-xl md:text-2xl mb-8" style="color: rgba(255,255,255,0.9);">Get alerts, export data, and access historic permit information with PermitIndex Pro</p>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <!-- Free Plan -->
+                <div class="pricing-card">
+                    <h3 class="text-2xl font-bold mb-2">Free</h3>
+                    <div class="price text-4xl font-bold mb-6" style="color: var(--primary);">$0</div>
+                    <p class="text-sm mb-6" style="color: var(--text-light);">Browse all permits and licenses</p>
+                    <a href="/" class="cta-button secondary w-full block" onclick="trackPricingCTA('Free')">
+                        Get Started
+                    </a>
+                    <ul class="feature-list mt-8 text-sm">
+                        <li>Browse all permits</li>
+                        <li>Basic search</li>
+                        <li>View requirements & costs</li>
+                        <li>Agency contact info</li>
+                    </ul>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card popular">
+                    <h3 class="text-2xl font-bold mb-2">Pro</h3>
+                    <div class="price text-4xl font-bold mb-2" style="color: var(--primary);">$39<span class="text-lg">/mo</span></div>
+                    <p class="text-xs mb-4" style="color: var(--text-light);">$390/year (save $78)</p>
+                    <p class="text-sm mb-6" style="color: var(--text-light);">Perfect for contractors & businesses</p>
+                    <a href="/coming-soon/?plan=pro" class="cta-button w-full block" onclick="trackPricingCTA('Pro')">
+                        Join Waitlist
+                    </a>
+                    <ul class="feature-list mt-8 text-sm">
+                        <li>Everything in Free</li>
+                        <li>Up to 10 email alerts</li>
+                        <li>CSV data export</li>
+                        <li>2+ years historic data</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+
+                <!-- Business Plan -->
+                <div class="pricing-card">
+                    <h3 class="text-2xl font-bold mb-2">Business</h3>
+                    <div class="price text-4xl font-bold mb-2" style="color: var(--primary);">$99<span class="text-lg">/mo</span></div>
+                    <p class="text-xs mb-4" style="color: var(--text-light);">$990/year (save $198)</p>
+                    <p class="text-sm mb-6" style="color: var(--text-light);">For teams & developers</p>
+                    <a href="/coming-soon/?plan=business" class="cta-button secondary w-full block" onclick="trackPricingCTA('Business')">
+                        Join Waitlist
+                    </a>
+                    <ul class="feature-list mt-8 text-sm">
+                        <li>Everything in Pro</li>
+                        <li>Unlimited email alerts</li>
+                        <li>API access (1,000 req/day)</li>
+                        <li>Change webhooks</li>
+                        <li>Full documentation</li>
+                        <li>Dedicated support</li>
+                    </ul>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card enterprise">
+                    <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                    <div class="price text-4xl font-bold mb-6">Custom</div>
+                    <p class="text-sm mb-6" style="color: rgba(255,255,255,0.9);">Tailored for your organization</p>
+                    <a href="mailto:sales@permitindex.com?subject=Enterprise%20Plan%20Inquiry" class="cta-button outline w-full block" onclick="trackPricingCTA('Enterprise')">
+                        Talk to Us
+                    </a>
+                    <ul class="feature-list mt-8 text-sm" style="color: rgba(255,255,255,0.9);">
+                        <li style="border-color: rgba(255,255,255,0.2);">Everything in Business</li>
+                        <li style="border-color: rgba(255,255,255,0.2);">Unlimited API requests</li>
+                        <li style="border-color: rgba(255,255,255,0.2);">Custom integrations</li>
+                        <li style="border-color: rgba(255,255,255,0.2);">SLA guarantees</li>
+                        <li style="border-color: rgba(255,255,255,0.2);">On-premise options</li>
+                        <li style="border-color: none;">White-label solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison Table -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Compare All Features</h2>
+            <div class="max-w-5xl mx-auto overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--border);">
+                            <th class="pb-4 pr-4">Feature</th>
+                            <th class="pb-4 px-4 text-center">Free</th>
+                            <th class="pb-4 px-4 text-center" style="color: var(--accent);">Pro</th>
+                            <th class="pb-4 px-4 text-center">Business</th>
+                            <th class="pb-4 px-4 text-center">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td class="py-4 pr-4">Browse all permits</td>
+                            <td class="py-4 px-4 text-center">✓</td>
+                            <td class="py-4 px-4 text-center">✓</td>
+                            <td class="py-4 px-4 text-center">✓</td>
+                            <td class="py-4 px-4 text-center">✓</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td class="py-4 pr-4">Email alerts</td>
+                            <td class="py-4 px-4 text-center">-</td>
+                            <td class="py-4 px-4 text-center">Up to 10</td>
+                            <td class="py-4 px-4 text-center">Unlimited</td>
+                            <td class="py-4 px-4 text-center">Unlimited</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td class="py-4 pr-4">CSV export</td>
+                            <td class="py-4 px-4 text-center">-</td>
+                            <td class="py-4 px-4 text-center">✓</td>
+                            <td class="py-4 px-4 text-center">✓</td>
+                            <td class="py-4 px-4 text-center">✓</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td class="py-4 pr-4">Historic data (2+ years)</td>
+                            <td class="py-4 px-4 text-center">-</td>
+                            <td class="py-4 px-4 text-center">✓</td>
+                            <td class="py-4 px-4 text-center">✓</td>
+                            <td class="py-4 px-4 text-center">✓</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td class="py-4 pr-4">API access</td>
+                            <td class="py-4 px-4 text-center">-</td>
+                            <td class="py-4 px-4 text-center">-</td>
+                            <td class="py-4 px-4 text-center">1,000 req/day</td>
+                            <td class="py-4 px-4 text-center">Unlimited</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td class="py-4 pr-4">Webhooks</td>
+                            <td class="py-4 px-4 text-center">-</td>
+                            <td class="py-4 px-4 text-center">-</td>
+                            <td class="py-4 px-4 text-center">✓</td>
+                            <td class="py-4 px-4 text-center">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 pr-4">Support</td>
+                            <td class="py-4 px-4 text-center">Community</td>
+                            <td class="py-4 px-4 text-center">Priority</td>
+                            <td class="py-4 px-4 text-center">Dedicated</td>
+                            <td class="py-4 px-4 text-center">White-glove</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Trusted By</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="text-center p-6 bg-white rounded-lg shadow">
+                    <div class="text-4xl mb-4">🏗️</div>
+                    <h3 class="text-xl font-bold mb-2">Contractors</h3>
+                    <p class="text-sm" style="color: var(--text-light);">Stay on top of licensing requirements and renewals</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow">
+                    <div class="text-4xl mb-4">📋</div>
+                    <h3 class="text-xl font-bold mb-2">Compliance Teams</h3>
+                    <p class="text-sm" style="color: var(--text-light);">Track regulatory changes across jurisdictions</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h3 class="text-xl font-bold mb-2">Developers</h3>
+                    <p class="text-sm" style="color: var(--text-light);">Integrate permit data into your applications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="border-b pb-6" style="border-color: var(--border);">
+                    <h3 class="text-xl font-bold mb-2">When will premium features launch?</h3>
+                    <p style="color: var(--text-light);">We're currently building PermitIndex Pro. Join the waitlist to be notified when we launch and get early access pricing.</p>
+                </div>
+                <div class="border-b pb-6" style="border-color: var(--border);">
+                    <h3 class="text-xl font-bold mb-2">Can I cancel anytime?</h3>
+                    <p style="color: var(--text-light);">Yes! All plans are month-to-month with no long-term commitments. Cancel anytime from your account settings.</p>
+                </div>
+                <div class="border-b pb-6" style="border-color: var(--border);">
+                    <h3 class="text-xl font-bold mb-2">Do you offer annual billing?</h3>
+                    <p style="color: var(--text-light);">Yes! Pay annually and save 2 months on Pro ($390/year) or Business ($990/year) plans.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-2">What payment methods do you accept?</h3>
+                    <p style="color: var(--text-light);">We accept all major credit cards, debit cards, and ACH transfers for Enterprise plans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/footer.html' %}
+
+    <!-- Analytics Event Tracking -->
+    <script>
+        function trackPricingCTA(plan) {
+            if (typeof plausible !== 'undefined') {
+                plausible('Pricing CTA Click', {
+                    props: {
+                        plan: plan
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

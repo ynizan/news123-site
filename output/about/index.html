@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+
+    <!-- Primary Meta Tags -->
+    <title>About PermitIndex - Our Mission</title>
+    <meta name="title" content="About PermitIndex - Our Mission">
+    <meta name="description" content="Learn about PermitIndex's mission to make government permits and licenses accessible to everyone. Discover how we're building the most comprehensive permit database.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://permitindex.com/about">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://permitindex.com/about">
+    <meta property="og:title" content="About PermitIndex - Our Mission">
+    <meta property="og:description" content="Making government permits and licenses accessible to everyone.">
+    <meta property="og:image" content="https://permitindex.com/og-image.png">
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-ag6g5Gg1btKfcdZ4oA-vo.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PermitIndex Brand Styles -->
+    <style>
+        :root {
+            --primary: #003366;
+            --accent: #FF6B35;
+            --text: #1a1a1a;
+            --text-light: #666666;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --border: #e0e0e0;
+            --success: #10b981;
+            --font-display: 'Arial Black', 'Helvetica Bold', sans-serif;
+            --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --radius-large: 12px;
+            --radius-medium: 8px;
+            --shadow-low: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-medium: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        body {
+            background: var(--bg-light);
+            color: var(--text);
+            font-family: var(--font-body);
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .star-box {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--radius-large);
+            box-shadow: var(--shadow-low);
+            margin-bottom: 2rem;
+        }
+
+        .star-box::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: 18px;
+            width: 18px;
+            height: 18px;
+            background: var(--bg-light);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .star-box {
+            position: relative;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-medium);
+            border: 2px solid var(--border);
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+            border-color: var(--primary);
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header style="background: var(--bg); box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-bottom: 1px solid var(--border);">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PermitIndex" style="height: 32px; width: auto;">
+                            <title>PermitIndex</title>
+                            <defs>
+                                <mask id="p-star-mask">
+                                    <rect width="100%" height="100%" fill="white"/>
+                                    <polygon points="20,2 21.5,6 25.5,6 22.2,8.5 23.5,12.5 20,9.8 16.5,12.5 17.8,8.5 14.5,6 18.5,6" fill="black"/>
+                                </mask>
+                            </defs>
+                            <g fill="var(--primary)" font-family="Arial Black, sans-serif" font-weight="900">
+                                <text x="0" y="32" font-size="36" letter-spacing="-1" mask="url(#p-star-mask)">P</text>
+                                <text x="25" y="32" font-size="36" letter-spacing="-1">ermitIndex</text>
+                            </g>
+                        </svg>
+                    </a>
+                    <p class="text-sm" style="color: var(--text-light);">Complete Database of US Government Transactions</p>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Home</a>
+                    <a href="/pricing/" style="color: var(--text-light);" onmouseover="this.style.color=\'var(--primary)\'" onmouseout="this.style.color=\'var(--text-light)\'">Pricing</a>
+                    <a href="/about" style="color: var(--primary);" class="font-medium">About</a>
+                    <a href="/contact" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section style="background: linear-gradient(135deg, var(--primary) 0%, #004d99 100%);" class="text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 style="color: white;" class="mb-6">Making Government Permits Accessible to Everyone</h1>
+                <p class="text-xl md:text-2xl" style="color: rgba(255,255,255,0.9);">We're building the most comprehensive database of government permits, licenses, and transactions across the United States.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16">
+        <div class="max-w-5xl mx-auto">
+            <!-- The Problem -->
+            <div class="star-box">
+                <h2>The Problem We're Solving</h2>
+                <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text);">Navigating government permits and licenses is frustratingly difficult. Information is scattered across thousands of government websites, forms are confusing, requirements are unclear, and costs are hidden. Business owners, homeowners, and individuals waste countless hours trying to figure out what permits they need and how to get them.</p>
+                <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text); margin-top: 1rem;">PermitIndex changes that. We aggregate permit information from across all 50 states, making it searchable, comparable, and understandable in one place.</p>
+            </div>
+
+            <!-- Our Mission -->
+            <div class="star-box">
+                <h2>Our Mission</h2>
+                <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text);">To create universal access to government transaction information. Every permit, license, and government service should be easy to find, understand, and complete. We believe transparency in government processes benefits everyone—individuals, businesses, and communities.</p>
+            </div>
+
+            <!-- How It Works -->
+            <div class="star-box">
+                <h2>How PermitIndex Works</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <div class="feature-card">
+                        <div class="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center" style="background: rgba(0,51,102,0.1);">
+                            <svg class="w-8 h-8" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">1. Data Collection</h3>
+                        <p class="text-sm" style="color: var(--text-light);">We collect permit information from official government sources and verified contributors.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center" style="background: rgba(16,185,129,0.1);">
+                            <svg class="w-8 h-8" style="color: var(--success);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">2. Verification</h3>
+                        <p class="text-sm" style="color: var(--text-light);">Expert contributors review and verify permit details to ensure accuracy.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center" style="background: rgba(255,107,53,0.1);">
+                            <svg class="w-8 h-8" style="color: var(--accent);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">3. Easy Access</h3>
+                        <p class="text-sm" style="color: var(--text-light);">Search, compare, and access permit information instantly from any device.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What We Provide -->
+            <div class="star-box">
+                <h2>What Information We Provide</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <div class="flex items-start gap-3">
+                        <svg class="w-6 h-6 mt-1 flex-shrink-0" style="color: var(--success);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-bold mb-1">Costs & Fees</h3>
+                            <p class="text-sm" style="color: var(--text-light);">Exact application fees, renewal costs, and payment methods</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <svg class="w-6 h-6 mt-1 flex-shrink-0" style="color: var(--success);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-bold mb-1">Processing Times</h3>
+                            <p class="text-sm" style="color: var(--text-light);">How long applications typically take to process</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <svg class="w-6 h-6 mt-1 flex-shrink-0" style="color: var(--success);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-bold mb-1">Requirements</h3>
+                            <p class="text-sm" style="color: var(--text-light);">Eligibility criteria, documents needed, and prerequisites</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <svg class="w-6 h-6 mt-1 flex-shrink-0" style="color: var(--success);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-bold mb-1">How to Apply</h3>
+                            <p class="text-sm" style="color: var(--text-light);">Step-by-step instructions and direct links to application portals</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <svg class="w-6 h-6 mt-1 flex-shrink-0" style="color: var(--success);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-bold mb-1">Online Availability</h3>
+                            <p class="text-sm" style="color: var(--text-light);">Whether permits can be obtained online or require in-person visits</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <svg class="w-6 h-6 mt-1 flex-shrink-0" style="color: var(--success);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-bold mb-1">User Tips</h3>
+                            <p class="text-sm" style="color: var(--text-light);">Community-contributed advice and common mistakes to avoid</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Commitment -->
+            <div class="star-box">
+                <h2>Our Commitment to You</h2>
+                <div class="mt-6 space-y-4">
+                    <div class="flex items-start gap-3">
+                        <svg class="w-6 h-6 mt-1 flex-shrink-0" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-bold">Accuracy First</h3>
+                            <p style="color: var(--text-light);">We verify all information with official sources and rely on expert contributors to maintain data quality.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <svg class="w-6 h-6 mt-1 flex-shrink-0" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-bold">Privacy Focused</h3>
+                            <p style="color: var(--text-light);">We use privacy-friendly analytics with no cookies or tracking. Your searches and browsing remain private.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <svg class="w-6 h-6 mt-1 flex-shrink-0" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-bold">Always Free</h3>
+                            <p style="color: var(--text-light);">Our core database will always be free to search and use. No paywalls, no subscriptions required.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <svg class="w-6 h-6 mt-1 flex-shrink-0" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-bold">Community Driven</h3>
+                            <p style="color: var(--text-light);">Users and expert contributors help us improve and expand our database every day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Get Involved -->
+            <div class="star-box" style="background: var(--primary); color: white;">
+                <h2 style="color: white;">Get Involved</h2>
+                <p style="font-size: 1.125rem; line-height: 1.8; color: rgba(255,255,255,0.9);">PermitIndex is a community effort. Whether you're a government expert, permit consultant, or just someone who's navigated the permit process, you can help make government more accessible.</p>
+                <div class="mt-6 flex flex-col sm:flex-row gap-4">
+                    <a href="/contribute/" style="display: inline-block; padding: 14px 32px; background: var(--accent); color: white; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        Become a Contributor
+                    </a>
+                    <a href="/contact" style="display: inline-block; padding: 14px 32px; background: white; color: var(--primary); border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16" style="background: #1a1a1a; color: #d1d5db;">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4" style="color: white;">PermitIndex</h3>
+                    <p class="text-sm">Complete Database of US Government Transactions</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">About</a></li>
+                        <li><a href="/pricing/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Pricing</a></li>
+                        <li><a href="/contributors/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Contributors</a></li>
+                        <li><a href="/contribute/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Become a Contributor</a></li>
+                        <li><a href="/contact" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/states" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Browse by State</a></li>                        <li><a href="/faq" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/privacy" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Privacy Policy</a></li>
+                        <li><a href="/terms" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 text-sm text-center" style="border-top: 1px solid #333;">
+                <p>&copy; 2024 PermitIndex. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

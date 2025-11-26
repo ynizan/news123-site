@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon - comprehensive browser support -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64x64.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+
+    <!-- Android/Chrome -->
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <!-- Theme colors -->
+    <meta name="theme-color" content="#003366">
+    <meta name="msapplication-TileColor" content="#003366">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+
+    <!-- Primary Meta Tags -->
+    <title>Local Permit Experts & Contributors - PermitIndex</title>
+    <meta name="title" content="Local Permit Experts & Contributors - PermitIndex">
+    <meta name="description" content="Connect with local permit experts who help businesses and individuals navigate government permits and licenses across the United States. Verified contributors with years of experience.">
+    <meta name="keywords" content="permit experts, license consultants, permit help, government transaction experts, local permit specialists">
+    <meta name="author" content="PermitIndex">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://permitindex.com/contributors/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://permitindex.com/contributors/">
+    <meta property="og:title" content="Local Permit Experts & Contributors - PermitIndex">
+    <meta property="og:description" content="Connect with local permit experts who help businesses and individuals navigate government permits and licenses.">
+    <meta property="og:site_name" content="PermitIndex">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://permitindex.com/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://permitindex.com/contributors/">
+    <meta name="twitter:title" content="Local Permit Experts & Contributors - PermitIndex">
+    <meta name="twitter:description" content="Connect with local permit experts who help businesses and individuals navigate government permits and licenses.">
+    <meta name="twitter:image" content="https://permitindex.com/og-image.png">
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-ag6g5Gg1btKfcdZ4oA-vo.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PermitIndex Brand Styles -->
+    <style>
+        :root {
+            /* Colors */
+            --primary: #003366;
+            --accent: #FF6B35;
+            --text: #1a1a1a;
+            --text-light: #666666;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --border: #e0e0e0;
+            --success: #10b981;
+
+            /* Typography */
+            --font-display: 'Arial Black', 'Helvetica Bold', sans-serif;
+            --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+            /* Spacing */
+            --radius-large: 12px;
+            --radius-medium: 8px;
+            --radius-small: 6px;
+
+            /* Shadows */
+            --shadow-low: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-medium: 0 4px 16px rgba(0,0,0,0.1);
+            --shadow-high: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        body {
+            background: var(--bg-light);
+            color: var(--text);
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 900;
+            letter-spacing: -1px;
+            color: var(--primary);
+        }
+
+        /* Logo */
+        .logo svg {
+            height: 32px;
+            width: auto;
+        }
+
+        /* Star cutout system */
+        .star-box {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius-large);
+            position: relative;
+            box-shadow: var(--shadow-low);
+        }
+
+        .star-box::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: 18px;
+            width: 18px;
+            height: 18px;
+            background: var(--bg-light);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .star-box.primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .star-box.bordered {
+            border: 2px solid var(--border);
+            background: white;
+            overflow: hidden;
+        }
+
+        .star-box.bordered::before {
+            background: var(--border);
+            top: -9px;
+        }
+
+        /* Buttons with star cutouts */
+        .star-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: var(--radius-medium);
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .star-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .star-button::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: 12px;
+            width: 12px;
+            height: 12px;
+            background: var(--bg-light);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .star-button.secondary {
+            background: var(--primary);
+        }
+
+        .star-button.outline {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            overflow: hidden;
+        }
+
+        .star-button.outline::before {
+            background: var(--primary);
+            top: -6px;
+        }
+
+        /* Buttons inside colored containers */
+        .star-box.primary .star-button::before {
+            background: var(--primary);
+        }
+
+        .star-box.primary .star-button.outline::before {
+            background: white;
+        }
+
+        /* Contributor card specific styles */
+        .contributor-card {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-large);
+            border: 2px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .contributor-card::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: 18px;
+            width: 18px;
+            height: 18px;
+            background: var(--border);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .contributor-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-4px);
+        }
+
+        .contributor-card:hover::before {
+            background: var(--primary);
+        }
+
+        /* Specialty badges */
+        .specialty-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: var(--accent);
+            color: white;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            transition: all 0.2s;
+        }
+
+        .specialty-badge:hover {
+            background: var(--primary);
+            transform: scale(1.05);
+        }
+
+        /* Location badge */
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 6px 12px;
+            background: rgba(0,51,102,0.1);
+            color: var(--primary);
+            border-radius: var(--radius-small);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* State section headers */
+        .state-header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 12px;
+            margin-bottom: 24px;
+        }
+    </style>
+
+    <!-- JSON-LD Structured Data: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://permitindex.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contributors",
+          "item": "https://permitindex.com/contributors/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: CollectionPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Local Permit Experts & Contributors",
+      "description": "Connect with local permit experts who help businesses and individuals navigate government permits and licenses across the United States.",
+      "url": "https://permitindex.com/contributors/",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "PermitIndex",
+        "url": "https://permitindex.com"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: Person for each contributor -->
+    {% for contributor in contributors %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ contributor.name }}",
+      "url": "{{ contributor.website_url }}",
+      "jobTitle": "Permit Consultant",
+      "description": "{{ contributor.bio }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ contributor.location_city }}",
+        "addressRegion": "{{ contributor.location_state }}"
+      },
+      "knowsAbout": {{ contributor.specialties.split(', ') | tojson }}
+    }
+    </script>
+    {% endfor %}
+</head>
+<body style="background: var(--bg-light); color: var(--text);">
+    {% include 'components/header.html' %}
+
+    <!-- Hero Section -->
+    <section style="background: linear-gradient(135deg, var(--primary) 0%, #004d99 100%);" class="text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 style="color: white;" class="text-4xl md:text-5xl font-bold mb-4">Local Permit Experts & Contributors</h1>
+                <p class="text-lg md:text-xl mb-6" style="color: rgba(255,255,255,0.9);">Connect with verified local experts who help businesses and individuals navigate government permits and licenses across the United States.</p>
+
+                <div class="flex flex-wrap justify-center gap-4 text-sm">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Verified Experts
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Years of Experience
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Local Knowledge
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16">
+        <!-- Become a Contributor Callout -->
+        <section class="star-box accent p-10 text-center text-white mb-16">
+            <h2 style="color: white;" class="text-3xl md:text-4xl font-bold mb-4">Are You a Local Permit Expert?</h2>
+            <p class="text-lg mb-6 max-w-2xl mx-auto" style="color: rgba(255,255,255,0.95);">Join our network of verified contributors and help your community navigate government processes while building your professional reputation.</p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <a href="/contribute/coming-soon/" class="star-button large secondary apply-contributor-btn" onclick="plausible('ApplyBecomeContributorClick');">
+                    Become a Contributor
+                </a>
+                <a href="/contribute/#faq" class="star-button outline large">
+                    Learn More
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8" style="border-top: 1px solid rgba(255,255,255,0.2);">
+                <div class="text-sm">
+                    <div class="font-bold mb-1" style="color: white;">Build Your Reputation</div>
+                    <p style="color: rgba(255,255,255,0.85);">Your name on every permit you verify</p>
+                </div>
+                <div class="text-sm">
+                    <div class="font-bold mb-1" style="color: white;">Get Visibility</div>
+                    <p style="color: rgba(255,255,255,0.85);">Featured profile in our directory</p>
+                </div>
+                <div class="text-sm">
+                    <div class="font-bold mb-1" style="color: white;">Help Your Community</div>
+                    <p style="color: rgba(255,255,255,0.85);">Just 1-2 hours per quarter</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contributors by State -->
+        {% if contributors|length == 0 %}
+        <!-- Empty State: No Contributors Yet -->
+        <section class="star-box bordered p-12 text-center max-w-3xl mx-auto mb-16">
+            <div class="mb-6">
+                <svg class="w-20 h-20 mx-auto" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+            </div>
+            <h2 class="text-3xl font-bold mb-4" style="color: var(--primary);">Be the First Contributor!</h2>
+            <p class="text-lg mb-6" style="color: var(--text);">No contributors yet. Help us launch this program by becoming our first verified permit expert.</p>
+            <p class="text-base mb-8" style="color: var(--text-light);">As a founding contributor, you'll have the opportunity to establish yourself as a trusted authority in your jurisdiction and help shape how permit information is verified and shared.</p>
+            <a href="/contribute/" class="star-button large">Apply to Be Our First Contributor</a>
+        </section>
+        {% else %}
+        {% for state, state_contributors in contributors_by_state.items() %}
+        <section class="mb-16">
+            <div class="state-header">
+                <h2 class="text-3xl font-bold">{{ state }}</h2>
+            </div>
+
+            {% for city, city_contributors in state_contributors.items() %}
+            <div class="mb-12">
+                <h3 class="text-xl font-bold mb-6" style="color: var(--text);">
+                    <svg class="w-5 h-5 inline-block mr-2" style="color: var(--accent);" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                    {{ city }}
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {% for contributor in city_contributors %}
+                    <div class="contributor-card">
+                        <div class="mb-4">
+                            <h4 class="text-xl font-bold mb-2" style="color: var(--primary);">{{ contributor.name }}</h4>
+                            <div class="location-badge">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                {{ contributor.location_city }}, {{ contributor.location_state }}
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            {% for specialty in contributor.specialties.split(', ') %}
+                            <span class="specialty-badge">{{ specialty.strip() }}</span>
+                            {% endfor %}
+                        </div>
+
+                        <p class="text-sm mb-4" style="color: var(--text-light);">{{ contributor.bio }}</p>
+
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs" style="color: var(--text-light);">
+                                Member since {{ contributor.joined_date }}
+                            </span>
+                            <a href="{{ contributor.website_url }}" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold" style="color: var(--accent);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--accent)'">
+                                Visit Website →
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+        {% endfor %}
+        {% endif %}
+
+        <!-- Become a Contributor CTA -->
+        <section class="star-box primary p-12 text-center text-white mt-16">
+            <h2 style="color: white;" class="text-3xl md:text-4xl font-bold mb-4">Become a Contributor</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto" style="color: rgba(255,255,255,0.9);">Are you a permit expert or consultant? Help others navigate government processes and grow your business by joining our network of verified contributors.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contribute/coming-soon/" class="star-button apply-contributor-btn" onclick="plausible('ApplyBecomeContributorClick');">
+                    Apply to Become a Contributor
+                </a>
+                <a href="/contribute/#faq" class="star-button outline">
+                    Learn More About the Program
+                </a>
+            </div>
+
+            <div class="mt-8 pt-8" style="border-top: 1px solid rgba(255,255,255,0.2);">
+                <p class="text-sm" style="color: rgba(255,255,255,0.8);">All contributors are verified for expertise and professionalism</p>
+            </div>
+        </section>
+    </main>
+
+    {% include 'components/footer.html' %}
+
+    <!-- Plausible Analytics Custom Event Tracking -->
+    <script>
+    (function() {
+        'use strict';
+
+        // Track contributor website clicks
+        document.addEventListener('click', function(e) {
+            const contributorLink = e.target.closest('a[href*="example.com"]');
+            if (contributorLink && typeof plausible !== 'undefined') {
+                const card = contributorLink.closest('.contributor-card');
+                const contributorName = card ? card.querySelector('h4').textContent : 'unknown';
+
+                plausible('Contributor Website Click', {
+                    props: {
+                        contributor: contributorName
+                    }
+                });
+            }
+
+            // Track "Become a Contributor" CTA clicks
+            const ctaLink = e.target.closest('a[href*="contributor"]');
+            if (ctaLink && typeof plausible !== 'undefined') {
+                plausible('Become Contributor CTA', {
+                    props: {
+                        cta_type: ctaLink.textContent.includes('Apply') ? 'apply' : 'learn-more'
+                    }
+                });
+            }
+        });
+
+        // Track page engagement
+        let pageLoadTime = Date.now();
+        window.addEventListener('beforeunload', function() {
+            const timeOnPage = Math.round((Date.now() - pageLoadTime) / 1000);
+
+            if (timeOnPage > 5 && typeof plausible !== 'undefined') {
+                plausible('Contributors Page Time', {
+                    props: {
+                        duration_seconds: timeOnPage
+                    }
+                });
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+[
+  {
+    "name": "Alaska",
+    "slug": "alaska",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Arizona",
+    "slug": "arizona",
+    "permit_count": 7,
+    "online_count": 7,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "California",
+    "slug": "california",
+    "permit_count": 17,
+    "online_count": 17,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Colorado",
+    "slug": "colorado",
+    "permit_count": 3,
+    "online_count": 3,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "District of Columbia",
+    "slug": "district-of-columbia",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Florida",
+    "slug": "florida",
+    "permit_count": 5,
+    "online_count": 5,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Georgia",
+    "slug": "georgia",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Hawaii",
+    "slug": "hawaii",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Idaho",
+    "slug": "idaho",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Illinois",
+    "slug": "illinois",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Indiana",
+    "slug": "indiana",
+    "permit_count": 2,
+    "online_count": 2,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Kansas",
+    "slug": "kansas",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Kentucky",
+    "slug": "kentucky",
+    "permit_count": 2,
+    "online_count": 2,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Louisiana",
+    "slug": "louisiana",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Maryland",
+    "slug": "maryland",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Massachusetts",
+    "slug": "massachusetts",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Michigan",
+    "slug": "michigan",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Minnesota",
+    "slug": "minnesota",
+    "permit_count": 2,
+    "online_count": 2,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Missouri",
+    "slug": "missouri",
+    "permit_count": 2,
+    "online_count": 2,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Nebraska",
+    "slug": "nebraska",
+    "permit_count": 2,
+    "online_count": 2,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Nevada",
+    "slug": "nevada",
+    "permit_count": 5,
+    "online_count": 5,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "New Jersey",
+    "slug": "new-jersey",
+    "permit_count": 2,
+    "online_count": 2,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "New Mexico",
+    "slug": "new-mexico",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "New York",
+    "slug": "new-york",
+    "permit_count": 2,
+    "online_count": 2,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "North Carolina",
+    "slug": "north-carolina",
+    "permit_count": 5,
+    "online_count": 5,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Ohio",
+    "slug": "ohio",
+    "permit_count": 4,
+    "online_count": 4,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Oklahoma",
+    "slug": "oklahoma",
+    "permit_count": 2,
+    "online_count": 2,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Oregon",
+    "slug": "oregon",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Pennsylvania",
+    "slug": "pennsylvania",
+    "permit_count": 2,
+    "online_count": 2,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Puerto Rico",
+    "slug": "puerto-rico",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Tennessee",
+    "slug": "tennessee",
+    "permit_count": 2,
+    "online_count": 2,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Texas",
+    "slug": "texas",
+    "permit_count": 13,
+    "online_count": 13,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Virginia",
+    "slug": "virginia",
+    "permit_count": 4,
+    "online_count": 4,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Washington",
+    "slug": "washington",
+    "permit_count": 1,
+    "online_count": 1,
+    "api_count": 0,
+    "online_percent": 100
+  },
+  {
+    "name": "Wisconsin",
+    "slug": "wisconsin",
+    "permit_count": 2,
+    "online_count": 2,
+    "api_count": 0,
+    "online_percent": 100
+  }
+]

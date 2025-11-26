@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+
+    <!-- Primary Meta Tags -->
+    <title>California Permits & Licenses - PermitIndex</title>
+    <meta name="title" content="California Permits & Licenses - PermitIndex">
+    <meta name="description" content="Find all California government permits and licenses. 17 permits across 17 cities. Search requirements, costs, and application info.">
+    <meta name="keywords" content="California permits, California licenses, California business license, government permits California">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://permitindex.com/california/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://permitindex.com/california/">
+    <meta property="og:title" content="California Permits & Licenses">
+    <meta property="og:description" content="17 permits across 17 cities in California">
+    <meta property="og:image" content="https://permitindex.com/og-image.png">
+
+    <!-- Privacy-friendly analytics -->
+    <script async src="https://plausible.io/js/pa-ag6g5Gg1btKfcdZ4oA-vo.js"></script>
+    <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PermitIndex Brand Styles -->
+    <style>
+        :root {
+            --primary: #003366;
+            --accent: #FF6B35;
+            --text: #1a1a1a;
+            --text-light: #666666;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --border: #e0e0e0;
+            --success: #10b981;
+            --font-display: 'Arial Black', 'Helvetica Bold', sans-serif;
+            --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --radius-large: 12px;
+            --radius-medium: 8px;
+            --shadow-low: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-medium: 0 4px 16px rgba(0,0,0,0.1);
+        }
+        body {
+            background: var(--bg-light);
+            color: var(--text);
+            font-family: var(--font-body);
+        }
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 900;
+            color: var(--primary);
+        }
+        .star-box {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-large);
+            position: relative;
+            box-shadow: var(--shadow-low);
+        }
+        .star-box::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: 18px;
+            width: 18px;
+            height: 18px;
+            background: var(--bg-light);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+        .star-box.bordered {
+            border: 2px solid var(--border);
+        }
+        .star-box.bordered::before {
+            background: var(--border);
+            top: -9px;
+        }
+        .city-card, .permit-card {
+            transition: all 0.2s;
+        }
+        .city-card:hover, .permit-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            border-color: var(--primary);
+        }
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            font-size: 14px;
+            margin-bottom: 24px;
+            color: var(--text-light);
+        }
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header style="background: var(--bg); box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-bottom: 1px solid var(--border);">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg" style="height: 32px; width: auto;">
+                            <defs>
+                                <mask id="p-star-mask">
+                                    <rect width="100%" height="100%" fill="white"/>
+                                    <polygon points="20,2 21.5,6 25.5,6 22.2,8.5 23.5,12.5 20,9.8 16.5,12.5 17.8,8.5 14.5,6 18.5,6" fill="black"/>
+                                </mask>
+                            </defs>
+                            <g fill="var(--primary)" font-family="Arial Black, sans-serif" font-weight="900">
+                                <text x="0" y="32" font-size="36" letter-spacing="-1" mask="url(#p-star-mask)">P</text>
+                                <text x="25" y="32" font-size="36" letter-spacing="-1">ermitIndex</text>
+                            </g>
+                        </svg>
+                    </a>
+                    <p class="text-sm" style="color: var(--text-light);">Complete Database of US Government Transactions</p>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Home</a>
+                    <a href="/pricing/" style="color: var(--text-light);" onmouseover="this.style.color=\'var(--primary)\'" onmouseout="this.style.color=\'var(--text-light)\'">Pricing</a>
+                    <a href="/about" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">About</a>
+                    <a href="/contact" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="/">Home</a>
+            <span>›</span>
+            <span>California</span>
+        </div>
+
+        <!-- State Header -->
+        <div class="star-box mb-12" style="background: linear-gradient(135deg, var(--primary) 0%, #004d99 100%); color: white; padding: 40px;">
+            <div class="flex items-start gap-6 mb-6">
+                
+                <div style="background: rgba(255,255,255,0.2); border: 3px solid rgba(255,255,255,0.4); border-radius: var(--radius-large); padding: 16px 24px; min-width: 100px; text-align: center;">
+                    <div style="font-size: 48px; font-weight: 900; line-height: 1;">CA</div>
+                </div>
+                
+                <div class="flex-1">
+                    <h1 class="text-5xl mb-4" style="color: white;">California Permits & Licenses</h1>
+                    <p class="text-xl mb-4" style="color: rgba(255,255,255,0.9);">
+                        Your complete guide to government permits and licenses in California
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-6 text-lg">
+                <div style="background: rgba(255,255,255,0.15); padding: 12px 20px; border-radius: var(--radius-medium);">
+                    <strong style="font-size: 24px;">17</strong> <span style="color: rgba(255,255,255,0.9);">permits</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.15); padding: 12px 20px; border-radius: var(--radius-medium);">
+                    <strong style="font-size: 24px;">17</strong> <span style="color: rgba(255,255,255,0.9);">cities</span>
+                </div>
+                <div style="background: rgba(16,185,129,0.3); padding: 12px 20px; border-radius: var(--radius-medium);">
+                    <strong style="font-size: 24px;">17</strong> <span style="color: rgba(255,255,255,0.9);">online</span>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- State-wide Permits (if any) -->
+        
+
+        <!-- Cities -->
+        <section class="mb-12">
+            <h2 class="text-3xl mb-6">Cities in California</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                
+                <a href="/california/anaheim/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Anaheim</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/bakersfield/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Bakersfield</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/chula-vista/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Chula Vista</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/fremont/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Fremont</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/fresno/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Fresno</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/irvine/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Irvine</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/long-beach/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Long Beach</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/los-angeles/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Los Angeles</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/oakland/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Oakland</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/riverside/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Riverside</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/sacramento/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Sacramento</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/san-diego/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">San Diego</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/san-francisco/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">San Francisco</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/san-jose/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">San Jose</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/santa-ana/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Santa Ana</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/santa-clarita/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Santa Clarita</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+                <a href="/california/stockton/" class="star-box bordered city-card" style="text-decoration: none;">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg">Stockton</h3>
+                        <svg class="w-5 h-5" style="color: var(--text-light);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm mt-2" style="color: var(--text-light);">1 permit</p>
+                </a>
+                
+            </div>
+        </section>
+
+        <!-- All Permits by City -->
+        
+        <section class="mb-12">
+            <h2 class="text-3xl mb-6">All Permits by City</h2>
+            <p class="text-lg mb-6" style="color: var(--text-light);">Browse all California permits organized by city</p>
+
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/anaheim/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Anaheim
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/anaheim/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">City of Anaheim Business License Division</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 50-500</span>
+                            <span style="color: var(--text-light);">⏱️ 1-3</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/bakersfield/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Bakersfield
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/bakersfield/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">City of Bakersfield Business License Division</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 50-500</span>
+                            <span style="color: var(--text-light);">⏱️ 1-3</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/chula-vista/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Chula Vista
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/chula-vista/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">Chula Vista Dev Svcs</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 50-500</span>
+                            <span style="color: var(--text-light);">⏱️ 1-2</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/fremont/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Fremont
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/fremont/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">City of Fremont</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 50-500</span>
+                            <span style="color: var(--text-light);">⏱️ 1-2</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/fresno/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Fresno
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/fresno/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">City of Fresno Finance Department</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 50-500</span>
+                            <span style="color: var(--text-light);">⏱️ 1-2</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/irvine/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Irvine
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/irvine/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">City of Irvine</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 50-500</span>
+                            <span style="color: var(--text-light);">⏱️ 1-3</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/long-beach/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Long Beach
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/long-beach/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">City of Long Beach Finance Department</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 45-200</span>
+                            <span style="color: var(--text-light);">⏱️ 1-3</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/los-angeles/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Los Angeles
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/los-angeles/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">LADBS</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 26-1000</span>
+                            <span style="color: var(--text-light);">⏱️ 1-2</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/oakland/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Oakland
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/oakland/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">City of Oakland Business Tax Office</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 50-10000</span>
+                            <span style="color: var(--text-light);">⏱️ 1-2</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/riverside/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Riverside
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/riverside/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">City of Riverside Finance Department</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 50-500</span>
+                            <span style="color: var(--text-light);">⏱️ 1-2</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/sacramento/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Sacramento
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/sacramento/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">City of Sacramento Community Development Department</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 50-500</span>
+                            <span style="color: var(--text-light);">⏱️ 1-3</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/san-diego/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        San Diego
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/san-diego/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">Treasurer</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 25-1000</span>
+                            <span style="color: var(--text-light);">⏱️ 1-2</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/san-francisco/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        San Francisco
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/san-francisco/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">Office of Economic and Workforce Development</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 91-500</span>
+                            <span style="color: var(--text-light);">⏱️ 1-3</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/san-jose/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        San Jose
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/san-jose/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">Planning, Building & Code Enforcement</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 50-500</span>
+                            <span style="color: var(--text-light);">⏱️ 2-4</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/santa-ana/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Santa Ana
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/santa-ana/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">City of Santa Ana Business License Division</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 50-500</span>
+                            <span style="color: var(--text-light);">⏱️ 1-2</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/santa-clarita/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Santa Clarita
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/santa-clarita/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">City of Santa Clarita</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 50-500</span>
+                            <span style="color: var(--text-light);">⏱️ 1-3</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl mb-4">
+                    <a href="/california/stockton/" style="color: var(--primary); text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Stockton
+                    </a>
+                    <span class="text-lg" style="color: var(--text-light); font-weight: normal;"> • 1 permits</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <a href="/california/stockton/apply-for-a-business-license/" class="star-box bordered permit-card" style="text-decoration: none; padding: 16px;">
+                        <h4 class="text-base font-bold mb-2">Apply for a business license</h4>
+                        <p class="text-xs mb-2" style="color: var(--text-light);">Community Development Department</p>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span style="color: var(--text-light);">💵 50-500</span>
+                            <span style="color: var(--text-light);">⏱️ 1-2</span>
+                        </div>
+                        
+                        <span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600;">✓ Online</span>
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16" style="background: #1a1a1a; color: #d1d5db;">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4" style="color: white;">PermitIndex</h3>
+                    <p class="text-sm">Complete Database of US Government Transactions</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">About</a></li>
+                        <li><a href="/pricing/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Pricing</a></li>
+                        <li><a href="/contributors/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Contributors</a></li>
+                        <li><a href="/contribute/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Become a Contributor</a></li>
+                        <li><a href="/contact" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/states" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Browse by State</a></li>                        <li><a href="/faq" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/privacy" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Privacy Policy</a></li>
+                        <li><a href="/terms" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 text-sm text-center" style="border-top: 1px solid #333;">
+                <p>&copy; 2024 PermitIndex. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

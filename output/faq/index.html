@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+
+    <!-- Primary Meta Tags -->
+    <title>Frequently Asked Questions - PermitIndex</title>
+    <meta name="title" content="Frequently Asked Questions - PermitIndex">
+    <meta name="description" content="Find answers to common questions about PermitIndex, government permits, and how to use our database.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://permitindex.com/faq">
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-ag6g5Gg1btKfcdZ4oA-vo.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PermitIndex Brand Styles -->
+    <style>
+        :root {
+            --primary: #003366;
+            --accent: #FF6B35;
+            --text: #1a1a1a;
+            --text-light: #666666;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --border: #e0e0e0;
+            --font-display: 'Arial Black', 'Helvetica Bold', sans-serif;
+            --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --radius-large: 12px;
+            --radius-medium: 8px;
+            --shadow-low: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        body {
+            background: var(--bg-light);
+            color: var(--text);
+            font-family: var(--font-body);
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: -1px;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius-medium);
+            border: 2px solid var(--border);
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .faq-item:hover {
+            border-color: var(--primary);
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: var(--primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 1rem;
+            line-height: 1.7;
+            color: var(--text);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item .arrow {
+            transition: transform 0.2s;
+        }
+
+        .faq-item.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .category-header {
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header style="background: var(--bg); box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-bottom: 1px solid var(--border);">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PermitIndex" style="height: 32px; width: auto;">
+                            <title>PermitIndex</title>
+                            <defs>
+                                <mask id="p-star-mask">
+                                    <rect width="100%" height="100%" fill="white"/>
+                                    <polygon points="20,2 21.5,6 25.5,6 22.2,8.5 23.5,12.5 20,9.8 16.5,12.5 17.8,8.5 14.5,6 18.5,6" fill="black"/>
+                                </mask>
+                            </defs>
+                            <g fill="var(--primary)" font-family="Arial Black, sans-serif" font-weight="900">
+                                <text x="0" y="32" font-size="36" letter-spacing="-1" mask="url(#p-star-mask)">P</text>
+                                <text x="25" y="32" font-size="36" letter-spacing="-1">ermitIndex</text>
+                            </g>
+                        </svg>
+                    </a>
+                    <p class="text-sm" style="color: var(--text-light);">Complete Database of US Government Transactions</p>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Home</a>
+                    <a href="/pricing/" style="color: var(--text-light);" onmouseover="this.style.color=\'var(--primary)\'" onmouseout="this.style.color=\'var(--text-light)\'">Pricing</a>
+                    <a href="/about" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">About</a>
+                    <a href="/contact" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="mb-4">Frequently Asked Questions</h1>
+                <p class="text-xl" style="color: var(--text-light);">Find answers to common questions about PermitIndex and government permits</p>
+            </div>
+
+            <!-- General Questions -->
+            <h2 class="category-header">General</h2>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    What is PermitIndex?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    PermitIndex is a comprehensive database of government permits, licenses, and transactions across all 50 US states. We aggregate information from official government sources to help you find, understand, and complete permit applications more easily.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Is PermitIndex free to use?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! PermitIndex is completely free to search and use. You can browse all permit information without creating an account or paying any fees. We believe government information should be accessible to everyone.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Do I need to create an account?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    No, you don't need an account to search and view permit information. You can browse the entire database anonymously. Accounts are only needed if you want to become a contributor and help verify permit information.
+                </div>
+            </div>
+
+            <!-- Data & Accuracy -->
+            <h2 class="category-header">Data & Accuracy</h2>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    How accurate is the information?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We collect data from official government sources and verified contributors review the information for accuracy. However, government regulations change frequently, so we always recommend verifying critical details (especially costs and deadlines) directly with the relevant government agency before submitting applications.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    What if I find incorrect information?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Please <a href="/contact" style="color: var(--primary); text-decoration: underline;">contact us</a> immediately! We take data accuracy seriously and will update incorrect information as soon as possible. You can also submit corrections through the feedback form on individual permit pages.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    How often is the data updated?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We continuously update our database as government agencies change requirements, fees, or processes. Each permit page shows when the data was last verified. If you notice outdated information, please let us know.
+                </div>
+            </div>
+
+            <!-- Using PermitIndex -->
+            <h2 class="category-header">Using PermitIndex</h2>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Can I apply for permits through PermitIndex?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    No, PermitIndex is an information resource, not an application portal. We provide links to official government websites where you can submit applications. Think of us as your research tool before applying.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    What types of permits are included?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We include business licenses, building permits, professional licenses, environmental permits, health permits, trade licenses, and many other government transactions across federal, state, and local levels. Our database is continuously expanding.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Can I search permits by location?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! You can browse permits by state or use our search function to find permits relevant to your location. Each permit page clearly indicates where it applies (federal, state-specific, or local).
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    What's the difference between "online available" and "API available"?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    "Online available" means you can submit the application or get the permit online through the government's website. "API available" means the government provides programmatic access for developers to integrate permit data or submission into their own applications.
+                </div>
+            </div>
+
+            <!-- Contributing -->
+            <h2 class="category-header">Contributing</h2>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    How can I help improve PermitIndex?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    There are several ways to help: submit corrections or updates through our <a href="/contact" style="color: var(--primary); text-decoration: underline;">contact form</a>, become a verified contributor to review and add permit information, or share PermitIndex with others who might find it useful.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    What is a PermitIndex contributor?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Contributors are experts (permit consultants, government employees, attorneys, etc.) who help verify and maintain permit information. They get credit on permit pages they verify and may earn revenue sharing from future API usage. Learn more on our <a href="/contribute/" style="color: var(--primary); text-decoration: underline;">Contributors page</a>.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Can I request a permit to be added?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Absolutely! Use our <a href="/contact" style="color: var(--primary); text-decoration: underline;">contact form</a> and select "Request New Permit" as the subject. Tell us which permit you need information about, and we'll add it to our queue.
+                </div>
+            </div>
+
+            <!-- Privacy & Legal -->
+            <h2 class="category-header">Privacy & Legal</h2>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Do you track or sell my data?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    No. We use privacy-friendly analytics (Plausible) that doesn't use cookies or collect personally identifiable information. We don't track you across the web, and we never sell data. Read our <a href="/privacy" style="color: var(--primary); text-decoration: underline;">Privacy Policy</a> for details.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Can I use PermitIndex data for my business?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! You're welcome to use PermitIndex for commercial purposes, including research for clients or business planning. Please see our <a href="/terms" style="color: var(--primary); text-decoration: underline;">Terms of Service</a> for details. For API access or bulk data, please contact us.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Is PermitIndex affiliated with the government?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    No, PermitIndex is an independent service. We are not affiliated with any government agency. We collect publicly available government information and present it in an accessible format.
+                </div>
+            </div>
+
+            <!-- Technical -->
+            <h2 class="category-header">Technical</h2>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Is there an API available?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We're working on a public API for developers to access permit data programmatically. If you're interested in API access, please <a href="/contact" style="color: var(--primary); text-decoration: underline;">contact us</a> to join the waitlist.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Can I download the entire database?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Bulk downloads are not currently available for the general public. If you have a specific research or commercial need for the full dataset, please <a href="/contact" style="color: var(--primary); text-decoration: underline;">contact us</a> to discuss options.
+                </div>
+            </div>
+
+            <!-- Still have questions? -->
+            <div class="mt-12 p-8 rounded-lg text-center" style="background: var(--primary); color: white;">
+                <h2 style="color: white;" class="mb-4">Still Have Questions?</h2>
+                <p class="text-lg mb-6" style="color: rgba(255,255,255,0.9);">We're here to help! Reach out and we'll get back to you as soon as possible.</p>
+                <a href="/contact" style="display: inline-block; padding: 14px 32px; background: var(--accent); color: white; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16" style="background: #1a1a1a; color: #d1d5db;">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4" style="color: white;">PermitIndex</h3>
+                    <p class="text-sm">Complete Database of US Government Transactions</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">About</a></li>
+                        <li><a href="/pricing/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Pricing</a></li>
+                        <li><a href="/contributors/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Contributors</a></li>
+                        <li><a href="/contribute/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Become a Contributor</a></li>
+                        <li><a href="/contact" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/states" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Browse by State</a></li>                        <li><a href="/faq" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/privacy" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Privacy Policy</a></li>
+                        <li><a href="/terms" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 text-sm text-center" style="border-top: 1px solid #333;">
+                <p>&copy; 2024 PermitIndex. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAQ Toggle Script -->
+    <script>
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+
+        // Track FAQ clicks with Plausible
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const question = this.querySelector('.faq-question').textContent.replace('▼', '').trim();
+                if (typeof plausible !== 'undefined') {
+                    plausible('FAQ Click', {
+                        props: { question: question.substring(0, 100) }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

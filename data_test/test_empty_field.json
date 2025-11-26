@@ -1,0 +1,12 @@
+[
+  {
+    "agency_short": "",
+    "agency_full": "Empty Agency Dept",
+    "request_type": "Empty Field Test",
+    "cost": "400",
+    "effort_hours": "5 hours",
+    "location_applicability": "Statewide (Empty State)",
+    "online_available": "Yes",
+    "api_available": "No"
+  }
+]

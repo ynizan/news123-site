@@ -1,0 +1,73 @@
+name: Critical Tests (Every Push)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  critical-tests:
+    runs-on: ubuntu-22.04  # Use 22.04 for better package compatibility
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Install Playwright browsers
+        if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || github.event_name == 'workflow_dispatch'
+        run: |
+          python -m playwright install --with-deps chromium
+
+      - name: Run generator
+        run: SKIP_PAGEFIND=1 python3 generator.py
+
+      - name: Run build and data tests (PRs)
+        if: github.event_name == 'pull_request'
+        run: |
+          pytest tests/critical/test_site_builds.py tests/data/ \
+            -m critical \
+            --json-report \
+            --json-report-file=test-report.json \
+            --html=test-report.html \
+            --self-contained-html
+
+      - name: Run all critical tests (main branch)
+        id: critical_tests
+        if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || github.event_name == 'workflow_dispatch'
+        run: |
+          pytest tests/critical/ tests/data/ \
+            -m critical \
+            --json-report \
+            --json-report-file=test-report.json \
+            --html=test-report.html \
+            --self-contained-html
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: critical-test-report
+          path: |
+            test-report.html
+            test-report.json
+
+      - name: Send Slack notification
+        if: steps.critical_tests.outcome == 'failure' && ((github.event_name == 'push' && github.ref == 'refs/heads/main') || github.event_name == 'workflow_dispatch')
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"🚨 *PermitIndex Critical Tests Failed*\n\nTest report has been generated. Check the workflow artifacts for details.\n\nWorkflow: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+            ${{ secrets.SLACK_WEB_HOOK }}
+
+      - name: Fail if tests failed
+        if: failure()
+        run: exit 1

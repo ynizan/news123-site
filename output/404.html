@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+
+    <!-- Primary Meta Tags -->
+    <title>Page Not Found - PermitIndex</title>
+    <meta name="title" content="Page Not Found - PermitIndex">
+    <meta name="description" content="The page you're looking for doesn't exist. Browse our complete database of US government permits and transactions.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Page Not Found - PermitIndex">
+    <meta property="og:description" content="The page you're looking for doesn't exist.">
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-ag6g5Gg1btKfcdZ4oA-vo.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PermitIndex Brand Styles -->
+    <style>
+        :root {
+            --primary: #003366;
+            --accent: #FF6B35;
+            --text: #1a1a1a;
+            --text-light: #666666;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --border: #e0e0e0;
+            --font-display: 'Arial Black', 'Helvetica Bold', sans-serif;
+            --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --radius-large: 12px;
+            --radius-medium: 8px;
+            --shadow-low: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-medium: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        body {
+            background: var(--bg-light);
+            color: var(--text);
+            font-family: var(--font-body);
+        }
+
+        h1, h2 {
+            font-family: var(--font-display);
+            font-weight: 900;
+            letter-spacing: -1px;
+            color: var(--primary);
+        }
+
+        .star-box {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius-large);
+            position: relative;
+            box-shadow: var(--shadow-low);
+        }
+
+        .star-box::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: 18px;
+            width: 18px;
+            height: 18px;
+            background: var(--bg-light);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .star-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: var(--radius-medium);
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .star-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .star-button::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: 12px;
+            width: 12px;
+            height: 12px;
+            background: var(--bg-light);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .link-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-medium);
+            padding: 20px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.2s;
+        }
+
+        .link-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: 900;
+            line-height: 1;
+            color: var(--primary);
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header style="background: var(--bg); box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-bottom: 1px solid var(--border);">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PermitIndex" style="height: 32px; width: auto;">
+                            <title>PermitIndex</title>
+                            <defs>
+                                <mask id="p-star-mask">
+                                    <rect width="100%" height="100%" fill="white"/>
+                                    <polygon points="20,2 21.5,6 25.5,6 22.2,8.5 23.5,12.5 20,9.8 16.5,12.5 17.8,8.5 14.5,6 18.5,6" fill="black"/>
+                                </mask>
+                            </defs>
+                            <g fill="var(--primary)" font-family="Arial Black, sans-serif" font-weight="900">
+                                <text x="0" y="32" font-size="36" letter-spacing="-1" mask="url(#p-star-mask)">P</text>
+                                <text x="25" y="32" font-size="36" letter-spacing="-1">ermitIndex</text>
+                            </g>
+                        </svg>
+                    </a>
+                    <p class="text-sm" style="color: var(--text-light);">Complete Database of US Government Transactions</p>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" style="color: var(--text-light);" class="font-medium" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Home</a>
+                    <a href="/pricing/" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Pricing</a>
+                    <a href="/about" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">About</a>
+                    <a href="/contact" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <!-- 404 Header -->
+            <div class="text-center mb-12">
+                <div class="error-code">404</div>
+                <h1 class="text-5xl font-bold mb-4">Page Not Found</h1>
+                <p class="text-xl" style="color: var(--text-light);">
+                    Sorry, we couldn't find the page you're looking for. It might have been moved or doesn't exist.
+                </p>
+            </div>
+
+            <!-- Search Box -->
+            <div class="star-box mb-12">
+                <h2 class="text-2xl font-bold mb-4">Try searching for a permit</h2>
+                <form action="/" method="get">
+                    <div class="flex gap-3">
+                        <input
+                            type="text"
+                            name="q"
+                            placeholder="Search for permits, licenses, or regulations..."
+                            class="flex-1 px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none"
+                            style="border-color: var(--border);"
+                        >
+                        <button type="submit" class="star-button">Search</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Popular Pages -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-center">Popular Pages</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="/" class="link-card">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 flex-shrink-0" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                            </svg>
+                            <div>
+                                <h3 class="font-bold mb-1">Home</h3>
+                                <p class="text-sm" style="color: var(--text-light);">Browse all permits and transactions</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="/states" class="link-card">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 flex-shrink-0" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                            </svg>
+                            <div>
+                                <h3 class="font-bold mb-1">Browse by State</h3>
+                                <p class="text-sm" style="color: var(--text-light);">Find permits in your state</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="/about" class="link-card">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 flex-shrink-0" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <div>
+                                <h3 class="font-bold mb-1">About PermitIndex</h3>
+                                <p class="text-sm" style="color: var(--text-light);">Learn about our mission</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="/faq" class="link-card">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 flex-shrink-0" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <div>
+                                <h3 class="font-bold mb-1">FAQ</h3>
+                                <p class="text-sm" style="color: var(--text-light);">Frequently asked questions</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="/contribute/" class="link-card">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 flex-shrink-0" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            </svg>
+                            <div>
+                                <h3 class="font-bold mb-1">Contribute</h3>
+                                <p class="text-sm" style="color: var(--text-light);">Help improve our data</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="/contact" class="link-card">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 flex-shrink-0" style="color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <div>
+                                <h3 class="font-bold mb-1">Contact Us</h3>
+                                <p class="text-sm" style="color: var(--text-light);">Get in touch with our team</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Back to Home Button -->
+            <div class="text-center">
+                <a href="/" class="star-button">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16" style="background: #1a1a1a; color: #d1d5db;">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4" style="color: white;">PermitIndex</h3>
+                    <p class="text-sm">Complete Database of US Government Transactions</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">About</a></li>
+                        <li><a href="/pricing/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Pricing</a></li>
+                        <li><a href="/contributors/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Contributors</a></li>
+                        <li><a href="/contribute/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Become a Contributor</a></li>
+                        <li><a href="/contact" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/states" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Browse by State</a></li>
+                        <li><a href="/faq" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/privacy" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Privacy Policy</a></li>
+                        <li><a href="/terms" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 text-sm text-center" style="border-top: 1px solid #333;">
+                <p>&copy; 2024 PermitIndex. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Track 404 events -->
+    <script>
+        if (typeof plausible !== 'undefined') {
+            plausible('404', { props: { path: window.location.pathname } });
+        }
+    </script>
+</body>
+</html>

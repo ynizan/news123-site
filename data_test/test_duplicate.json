@@ -1,0 +1,12 @@
+[
+  {
+    "agency_short": "TEST Dept",
+    "agency_full": "Test State Department",
+    "request_type": "Test Permit",
+    "cost": "200",
+    "effort_hours": "3 hours",
+    "location_applicability": "Statewide (Test State)",
+    "online_available": "Yes",
+    "api_available": "No"
+  }
+]

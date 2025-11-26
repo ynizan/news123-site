@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# Pagefind search index (generated)
+output/pagefind/
+node_modules/
+package-lock.json
+test-browse-states.js
+package.json
+test-results/

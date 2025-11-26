@@ -1,0 +1,23 @@
+name: Process User Feedback
+
+on:
+  issues:
+    types: [opened]  # Only run on issue creation, not on label changes
+
+jobs:
+  process-feedback:
+    # Only run if issue has 'user-tip' label
+    if: contains(github.event.issue.labels.*.name, 'user-tip')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Comment on issue
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ Thank you for your feedback! It has been added to our database and is pending review. Once approved, it will appear on the PermitIndex website within 24 hours.\n\nTo approve: Add the `approved` label to this issue.\nTo reject: Close this issue without the `approved` label.'
+            })

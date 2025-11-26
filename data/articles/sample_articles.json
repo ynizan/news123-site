@@ -1,0 +1,140 @@
+[
+  {
+    "id": "tech-001",
+    "title": "AI Revolution: How Machine Learning is Transforming Industries",
+    "slug": "ai-revolution-machine-learning-transforming-industries",
+    "category": "Technology",
+    "category_slug": "technology",
+    "excerpt": "From healthcare to finance, artificial intelligence is reshaping how businesses operate and make decisions.",
+    "content": "<p>Artificial intelligence and machine learning technologies are experiencing unprecedented growth and adoption across virtually every industry sector.</p><p>Healthcare organizations are using AI to diagnose diseases earlier and more accurately. Financial institutions leverage machine learning for fraud detection and risk assessment. Manufacturing companies employ predictive maintenance to reduce downtime.</p><p>The implications of this technological shift are profound, affecting employment patterns, business models, and even the way we interact with technology in our daily lives.</p>",
+    "author": "Sarah Chen",
+    "published_date": "2024-11-25",
+    "source": "Tech Daily",
+    "reading_time": 5,
+    "tags": [
+      {
+        "name": "AI",
+        "slug": "ai"
+      },
+      {
+        "name": "Machine Learning",
+        "slug": "machine-learning"
+      }
+    ]
+  },
+  {
+    "id": "business-001",
+    "title": "Global Markets Rally as Economic Indicators Show Growth",
+    "slug": "global-markets-rally-economic-indicators-growth",
+    "category": "Business",
+    "category_slug": "business",
+    "excerpt": "Stock markets around the world posted significant gains following positive economic data releases.",
+    "content": "<p>Global stock markets experienced a significant rally this week as economic indicators across major economies showed stronger-than-expected growth.</p><p>The S&P 500 rose 2.3%, while European markets gained an average of 1.8%. Asian markets also closed higher, with the Nikkei advancing 1.5%.</p><p>Analysts attribute the positive sentiment to encouraging employment figures, robust consumer spending data, and easing inflation concerns.</p>",
+    "author": "Michael Torres",
+    "published_date": "2024-11-24",
+    "source": "Financial Times",
+    "reading_time": 4,
+    "tags": [
+      {
+        "name": "Markets",
+        "slug": "markets"
+      },
+      {
+        "name": "Economy",
+        "slug": "economy"
+      }
+    ]
+  },
+  {
+    "id": "politics-001",
+    "title": "New Climate Agreement Reached at International Summit",
+    "slug": "new-climate-agreement-international-summit",
+    "category": "Politics",
+    "category_slug": "politics",
+    "excerpt": "World leaders have agreed to ambitious new targets for reducing carbon emissions by 2030.",
+    "content": "<p>In a historic development, representatives from over 150 countries have agreed to new, more ambitious climate targets at the international climate summit.</p><p>The agreement commits signatory nations to reducing carbon emissions by 50% from 2020 levels by 2030, with a pathway to net-zero emissions by 2050.</p><p>Environmental groups have cautiously welcomed the agreement while noting that implementation will be crucial to its success.</p>",
+    "author": "Emma Williams",
+    "published_date": "2024-11-23",
+    "source": "World News",
+    "reading_time": 6,
+    "tags": [
+      {
+        "name": "Climate",
+        "slug": "climate"
+      },
+      {
+        "name": "Policy",
+        "slug": "policy"
+      }
+    ]
+  },
+  {
+    "id": "tech-002",
+    "title": "Breakthrough in Quantum Computing Achieved by Research Team",
+    "slug": "breakthrough-quantum-computing-research-team",
+    "category": "Technology",
+    "category_slug": "technology",
+    "excerpt": "Scientists demonstrate quantum advantage in solving complex optimization problems.",
+    "content": "<p>A team of researchers has achieved a significant breakthrough in quantum computing, demonstrating clear advantages over classical computers in solving specific optimization problems.</p><p>The achievement marks an important milestone in the development of practical quantum computing applications.</p><p>Industry experts believe this development could accelerate the timeline for commercially viable quantum computers.</p>",
+    "author": "David Park",
+    "published_date": "2024-11-22",
+    "source": "Science Weekly",
+    "reading_time": 7,
+    "tags": [
+      {
+        "name": "Quantum",
+        "slug": "quantum"
+      },
+      {
+        "name": "Research",
+        "slug": "research"
+      }
+    ]
+  },
+  {
+    "id": "sports-001",
+    "title": "Championship Finals Set After Dramatic Semifinal Victories",
+    "slug": "championship-finals-dramatic-semifinal-victories",
+    "category": "Sports",
+    "category_slug": "sports",
+    "excerpt": "Both semifinal matches went to overtime in what fans are calling the most exciting playoffs in years.",
+    "content": "<p>The championship finals are set after two thrilling semifinal matches that each required overtime to determine a winner.</p><p>Fans witnessed incredible performances from star players on all four teams, with several records broken in the process.</p><p>The finals are scheduled to begin next week, with anticipation building for what promises to be an epic showdown.</p>",
+    "author": "James Mitchell",
+    "published_date": "2024-11-21",
+    "source": "Sports Central",
+    "reading_time": 4,
+    "tags": [
+      {
+        "name": "Championship",
+        "slug": "championship"
+      },
+      {
+        "name": "Playoffs",
+        "slug": "playoffs"
+      }
+    ]
+  },
+  {
+    "id": "entertainment-001",
+    "title": "Streaming Service Announces Major Original Content Expansion",
+    "slug": "streaming-service-original-content-expansion",
+    "category": "Entertainment",
+    "category_slug": "entertainment",
+    "excerpt": "Popular streaming platform reveals plans to double original programming budget in 2025.",
+    "content": "<p>A leading streaming service has announced ambitious plans to significantly expand its original content offerings, doubling its production budget for the coming year.</p><p>The expansion will include new series from acclaimed creators, feature films, and documentary programming.</p><p>The move comes as competition in the streaming market intensifies, with platforms vying for subscriber attention.</p>",
+    "author": "Rachel Green",
+    "published_date": "2024-11-20",
+    "source": "Entertainment Weekly",
+    "reading_time": 3,
+    "tags": [
+      {
+        "name": "Streaming",
+        "slug": "streaming"
+      },
+      {
+        "name": "TV",
+        "slug": "tv"
+      }
+    ]
+  }
+]

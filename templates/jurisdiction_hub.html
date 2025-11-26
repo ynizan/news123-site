@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon - comprehensive browser support -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64x64.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+
+    <!-- Android/Chrome -->
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <!-- Theme colors -->
+    <meta name="theme-color" content="#003366">
+    <meta name="msapplication-TileColor" content="#003366">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+
+    <!-- Primary Meta Tags -->
+    <title>{{ jurisdiction_name }} Government Permits & Applications | PermitIndex</title>
+    <meta name="title" content="{{ jurisdiction_name }} Government Permits & Applications | PermitIndex">
+    <meta name="description" content="Complete guide to {{ jurisdiction_name }} government permits, licenses, and applications. {{ total_permits }} permits available, {{ online_permits }} with online access. Fast, reliable permit information.">
+    <meta name="keywords" content="{{ jurisdiction_name }}, permits, licenses, government, applications, {{ jurisdiction_name }} permits">
+    <meta name="author" content="PermitIndex">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://permitindex.com/{{ jurisdiction_slug }}/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://permitindex.com/{{ jurisdiction_slug }}/">
+    <meta property="og:title" content="{{ jurisdiction_name }} Government Permits & Applications | PermitIndex">
+    <meta property="og:description" content="Complete guide to {{ jurisdiction_name }} government permits. {{ total_permits }} permits available.">
+    <meta property="og:site_name" content="PermitIndex">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://permitindex.com/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://permitindex.com/{{ jurisdiction_slug }}/">
+    <meta name="twitter:title" content="{{ jurisdiction_name }} Government Permits & Applications">
+    <meta name="twitter:description" content="Complete guide to {{ jurisdiction_name }} government permits. {{ total_permits}} permits available.">
+    <meta name="twitter:image" content="https://permitindex.com/og-image.png">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PermitIndex Brand Styles -->
+    <style>
+        :root {
+            --primary: #003366;
+            --accent: #FF6B35;
+            --text: #1a1a1a;
+            --text-light: #666666;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --border: #e0e0e0;
+            --success: #10b981;
+            --font-display: 'Arial Black', 'Helvetica Bold', sans-serif;
+            --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --radius-large: 12px;
+            --radius-medium: 8px;
+            --radius-small: 6px;
+            --shadow-low: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-medium: 0 4px 16px rgba(0,0,0,0.1);
+            --shadow-high: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        body { background: var(--bg-light); color: var(--text); }
+        h1, h2 { font-family: var(--font-display); font-weight: 900; letter-spacing: -1px; color: var(--primary); }
+        .logo svg { height: 32px; width: auto; }
+        .star-box { background: white; padding: 30px; border-radius: var(--radius-large); position: relative; box-shadow: var(--shadow-low); }
+        .star-box::before { content: ''; position: absolute; top: -8px; right: 18px; width: 18px; height: 18px; background: var(--bg-light); clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+        .star-box.primary { background: var(--primary); color: white; }
+        .star-box.bordered { border: 2px solid var(--border); background: white; overflow: hidden; }
+        .star-box.bordered::before { background: var(--border); top: -9px; }
+        .star-button { display: inline-block; padding: 14px 32px; background: var(--accent); color: white; border: none; border-radius: var(--radius-medium); font-weight: 600; font-size: 15px; cursor: pointer; position: relative; transition: all 0.2s; text-decoration: none; }
+        .star-button:hover { transform: translateY(-2px); box-shadow: var(--shadow-medium); }
+        .star-button::before { content: ''; position: absolute; top: -5px; right: 12px; width: 12px; height: 12px; background: var(--bg-light); clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+        .star-button.secondary { background: var(--primary); }
+        .star-box.primary .star-button::before { background: var(--primary); }
+        .star-box.primary .star-button.outline::before { background: white; }
+        .status-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: var(--radius-medium); font-size: 13px; font-weight: 600; position: relative; }
+        .status-badge::before { content: ''; position: absolute; top: -5px; right: 12px; width: 12px; height: 12px; background: var(--bg-light); clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+        .status-badge.online { background: var(--success); color: white; }
+        .status-badge.api { background: var(--primary); color: white; }
+        .info-card { background: white; padding: 24px; border-radius: var(--radius-large); text-align: center; position: relative; border: 2px solid var(--border); overflow: hidden; }
+        .info-card::before { content: ''; position: absolute; top: -8px; right: 18px; width: 18px; height: 18px; background: var(--border); clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+        .info-value { font-size: 32px; font-weight: 900; color: var(--primary); margin-bottom: 8px; }
+        .info-label { font-size: 13px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+
+    <!-- JSON-LD Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://permitindex.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ jurisdiction_name }}",
+          "item": "https://permitindex.com/{{ jurisdiction_slug }}/"
+        }
+      ]
+    }
+    </script>
+</head>
+<body style="background: var(--bg-light); color: var(--text);">
+    <!-- Header -->
+    <header style="background: var(--bg); box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-bottom: 1px solid var(--border);">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PermitIndex">
+                            <title>PermitIndex</title>
+                            <desc>PermitIndex - Complete database of US government transactions</desc>
+                            <defs>
+                                <mask id="p-star-mask">
+                                    <rect width="100%" height="100%" fill="white"/>
+                                    <polygon points="20,2 21.5,6 25.5,6 22.2,8.5 23.5,12.5 20,9.8 16.5,12.5 17.8,8.5 14.5,6 18.5,6" fill="black"/>
+                                </mask>
+                            </defs>
+                            <g fill="var(--primary)" font-family="Arial Black, sans-serif" font-weight="900">
+                                <text x="0" y="32" font-size="36" letter-spacing="-1" mask="url(#p-star-mask)">P</text>
+                                <text x="25" y="32" font-size="36" letter-spacing="-1">ermitIndex</text>
+                            </g>
+                        </svg>
+                    </a>
+                    <p class="text-sm" style="color: var(--text-light);">Complete Database of US Government Transactions</p>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Home</a>
+                    <a href="/pricing/" style="color: var(--text-light);" onmouseover="this.style.color=\'var(--primary)\'" onmouseout="this.style.color=\'var(--text-light)\'">Pricing</a>
+                    <a href="/about" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">About</a>
+                    <a href="/contact" style="color: var(--text-light);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav style="background: var(--bg-light); border-bottom: 1px solid var(--border);" aria-label="Breadcrumb">
+        <div class="container mx-auto px-4 py-3">
+            <ol class="flex items-center space-x-2 text-sm">
+                <li>
+                    <a href="/" style="color: var(--primary);" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">Home</a>
+                </li>
+                <li style="color: var(--text-light);">/</li>
+                <li class="font-medium" style="color: var(--text);" aria-current="page">{{ jurisdiction_name }}</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <div class="star-box primary p-8 mb-8 text-white">
+            <h1 style="color: white;" class="text-4xl font-bold mb-4">Government Services in {{ jurisdiction_name }}</h1>
+            <p class="text-xl mb-6" style="color: rgba(255,255,255,0.9);">
+                Access comprehensive information about {{ jurisdiction_name }} permits, licenses, and government applications.
+                Find requirements, costs, timelines, and application processes.
+            </p>
+
+            <!-- Statistics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                <div class="info-card">
+                    <div class="info-value">{{ total_permits }}</div>
+                    <div class="info-label">Total Permits</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-value">{{ online_permits }}</div>
+                    <div class="info-label">Online Available</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-value">{{ api_permits }}</div>
+                    <div class="info-label">API Access</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-value">{{ mcp_permits }}</div>
+                    <div class="info-label">MCP Ready</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular Permits Section -->
+        {% if popular_permits %}
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6" style="color: var(--primary);">Most Popular Permits</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {% for permit in popular_permits %}
+                <a href="/{{ jurisdiction_slug }}/{{ permit.permit_slug }}/" class="star-box p-6 hover:shadow-lg transition" style="text-decoration: none;">
+                    <h3 class="text-xl font-semibold mb-2" style="color: var(--text);">{{ permit.request_type }}</h3>
+                    <p class="text-sm mb-4 line-clamp-2" style="color: var(--text-light);">{{ permit.description }}</p>
+                    <div class="flex items-center justify-between text-sm mb-4">
+                        <div>
+                            <span style="color: var(--text-light);">Cost:</span>
+                            <span class="font-semibold" style="color: var(--primary);">{{ permit.cost }}</span>
+                        </div>
+                        <div>
+                            <span style="color: var(--text-light);">Time:</span>
+                            <span class="font-semibold" style="color: var(--primary);">{{ permit.processing_time }}</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center flex-wrap gap-2">
+                        {% if permit.online_available == 'Yes' %}
+                        <span class="status-badge online">✅ Online</span>
+                        {% endif %}
+                        {% if permit.api_available == 'Yes' %}
+                        <span class="status-badge api">🔌 API</span>
+                        {% endif %}
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        <!-- All Permits Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6" style="color: var(--text);">All {{ jurisdiction_name }} Permits</h2>
+            <div class="rounded-lg shadow overflow-hidden" style="background: var(--bg);">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full" style="border-top: 1px solid var(--border);">
+                        <thead style="background: var(--bg-light);">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider" style="color: var(--text-light);">
+                                    Permit Name
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider" style="color: var(--text-light);">
+                                    Agency
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider" style="color: var(--text-light);">
+                                    Cost
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider" style="color: var(--text-light);">
+                                    Processing Time
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider" style="color: var(--text-light);">
+                                    Status
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody style="background: var(--bg); border-top: 1px solid var(--border);">
+                            {% for permit in all_permits %}
+                            <tr style="border-top: 1px solid var(--border);" onmouseover="this.style.background='var(--bg-light)'" onmouseout="this.style.background='var(--bg)'">
+                                <td class="px-6 py-4">
+                                    <a href="/{{ jurisdiction_slug }}/{{ permit.permit_slug }}/" class="font-medium" style="color: var(--primary);" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+                                        {{ permit.request_type }}
+                                    </a>
+                                </td>
+                                <td class="px-6 py-4 text-sm" style="color: var(--text-light);">
+                                    {{ permit.agency_full }}
+                                </td>
+                                <td class="px-6 py-4 text-sm font-semibold" style="color: var(--text);">
+                                    {{ permit.cost }}
+                                </td>
+                                <td class="px-6 py-4 text-sm" style="color: var(--text-light);">
+                                    {{ permit.processing_time }}
+                                </td>
+                                <td class="px-6 py-4 text-sm">
+                                    <div class="flex space-x-1">
+                                        {% if permit.online_available == 'Yes' %}
+                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium" style="background: rgba(16,185,129,0.1); color: var(--success);" title="Online Available">
+                                            ✅
+                                        </span>
+                                        {% endif %}
+                                        {% if permit.api_available == 'Yes' %}
+                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium" style="background: rgba(0,51,102,0.1); color: var(--primary);" title="API Available">
+                                            🔌
+                                        </span>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="rounded-lg shadow p-8" style="background: var(--bg);">
+            <h2 class="text-3xl font-bold mb-6" style="color: var(--text);">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-lg font-semibold mb-2" style="color: var(--text);">How do I apply for a {{ jurisdiction_name }} permit?</h3>
+                    <p style="color: var(--text-light);">Most {{ jurisdiction_name }} permits can be applied for online through the respective agency's website. Check the individual permit page for specific instructions and requirements.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2" style="color: var(--text);">How long does it take to get a permit in {{ jurisdiction_name }}?</h3>
+                    <p style="color: var(--text-light);">Processing times vary by permit type, ranging from a few days to several weeks. Each permit page shows the estimated processing time for that specific permit.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2" style="color: var(--text);">What documents do I need to apply for permits?</h3>
+                    <p style="color: var(--text-light);">Required documents vary by permit type. Common requirements include identification, proof of address, business licenses, and insurance certificates. Check the specific permit page for detailed requirements.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2" style="color: var(--text);">Can I check the status of my application online?</h3>
+                    <p style="color: var(--text-light);">Many {{ jurisdiction_name }} agencies offer online application tracking. Contact the issuing agency directly or check their website for application status updates.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2" style="color: var(--text);">Do I need to renew my permit?</h3>
+                    <p style="color: var(--text-light);">Most permits require periodic renewal, typically annually. Check your specific permit page for renewal frequency and procedures.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16" style="background: #1a1a1a; color: #d1d5db;">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4" style="color: white;">PermitIndex</h3>
+                    <p class="text-sm">Complete Database of US Government Transactions</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">About</a></li>
+                        <li><a href="/pricing/" onmouseover="this.style.color=\'white\'" onmouseout="this.style.color=\'#d1d5db\'">Pricing</a></li>
+                        <li><a href="/contact" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Contact</a></li>
+                        <li><a href="/privacy" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Privacy Policy</a></li>
+                        <li><a href="/terms" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">Browse States</a></li>
+                        <li><a href="/faq" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: white;">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'" aria-label="Twitter">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 text-sm text-center" style="border-top: 1px solid #333;">
+                <p>&copy; 2024 PermitIndex. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
