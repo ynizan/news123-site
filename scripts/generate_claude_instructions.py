@@ -26,13 +26,13 @@ def generate_instructions(test_report):
 
     # Header
     instructions = [
-        f"Subject: PermitIndex Tests Failed - {len(failed_tests)} issues detected\n",
+        f"Subject: News123 Tests Failed - {len(failed_tests)} issues detected\n",
         "",
         "─" * 70,
         "COPY EVERYTHING BELOW THIS LINE TO CLAUDE CODE",
         "─" * 70,
         "",
-        f"PermitIndex automated tests detected {len(failed_tests)} issues that need fixing.",
+        f"News123 automated tests detected {len(failed_tests)} issues that need fixing.",
         "",
         f"TASK: Fix the following test failures detected on {datetime.now().strftime('%Y-%m-%d')} at {datetime.now().strftime('%H:%M')} UTC",
         ""
@@ -153,7 +153,7 @@ def generate_fix_steps(test_name, error_msg):
             "2. Check all pages in output/ are included",
             "3. Ensure lastmod dates are ISO format",
             "4. Regenerate: python3 generator.py",
-            "5. Validate sitemap at https://permitindex.com/sitemap.xml"
+            "5. Validate sitemap at https://news123.info/sitemap.xml"
         ]
 
     # Broken link tests

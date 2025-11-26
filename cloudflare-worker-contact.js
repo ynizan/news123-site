@@ -1,5 +1,5 @@
 /**
- * Cloudflare Worker for PermitIndex Contact Form
+ * Cloudflare Worker for News123 Contact Form
  *
  * This worker receives contact form submissions and sends emails.
  *
@@ -9,7 +9,7 @@
  * 2. Create a new Worker
  * 3. Copy this code into the worker
  * 4. Add the following environment variables (Settings > Variables):
- *    - SEND_TO_EMAIL: Your email address (e.g., contact@permitindex.com)
+ *    - SEND_TO_EMAIL: Your email address (e.g., contact@news123.info)
  *
  * 5. Option A: Use Cloudflare Email Routing (Free)
  *    - Set up Email Routing in Cloudflare Dashboard
@@ -22,7 +22,7 @@
  *      - MAILGUN_DOMAIN: Your Mailgun domain
  *
  * 7. Set up a route:
- *    - Route pattern: permitindex.com/api/contact
+ *    - Route pattern: news123.info/api/contact
  *    - Worker: [your worker name]
  *
  * 8. Test the form on your site!
@@ -114,8 +114,8 @@ async function sendEmail(data, env) {
   // Fallback: Log to console (for development/testing)
   console.log('Email would be sent:', {
     from: `${name} <${email}>`,
-    to: env.SEND_TO_EMAIL || 'contact@permitindex.com',
-    subject: `[PermitIndex Contact] ${subject}`,
+    to: env.SEND_TO_EMAIL || 'contact@news123.info',
+    subject: `[News123 Contact] ${subject}`,
     message,
   });
 
@@ -136,8 +136,8 @@ async function sendViaMailgun(data, env) {
   const mailgunUrl = `https://api.mailgun.net/v3/${env.MAILGUN_DOMAIN}/messages`;
 
   const formData = new FormData();
-  formData.append('from', `PermitIndex Contact Form <noreply@${env.MAILGUN_DOMAIN}>`);
-  formData.append('to', env.SEND_TO_EMAIL || 'contact@permitindex.com');
+  formData.append('from', `News123 Contact Form <noreply@${env.MAILGUN_DOMAIN}>`);
+  formData.append('to', env.SEND_TO_EMAIL || 'contact@news123.info');
   formData.append('subject', `[Contact Form] ${subject}`);
   formData.append('text', `
 Name: ${name}
@@ -148,7 +148,7 @@ Message:
 ${message}
 
 ---
-Sent from PermitIndex contact form
+Sent from News123 contact form
 Reply-To: ${email}
   `.trim());
   formData.append('h:Reply-To', email);

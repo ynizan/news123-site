@@ -1,4 +1,4 @@
-# PermitIndex Developer Guide
+# News123 Developer Guide
 **Version:** 1.0
 **Last Updated:** November 2024
 
@@ -20,7 +20,7 @@
 
 ### Overview
 
-PermitIndex uses a strict brand color system defined in `/static/css/variables.css`. **All colors must use CSS variables** to ensure brand consistency.
+News123 uses a strict brand color system defined in `/static/css/variables.css`. **All colors must use CSS variables** to ensure brand consistency.
 
 ### Color Philosophy
 
@@ -263,7 +263,7 @@ background: var(--error);           /* #EF4444 */
 
 ### Color Contrast Requirements
 
-All PermitIndex colors meet **WCAG 2.1 Level AA** requirements:
+All News123 colors meet **WCAG 2.1 Level AA** requirements:
 
 | **Combination** | **Contrast Ratio** | **Status** |
 |-----------------|-------------------|------------|
@@ -714,5 +714,5 @@ python3 tests/brand_compliance_test.py
 ---
 
 **Last Updated:** November 14, 2024
-**Maintained By:** PermitIndex Team
+**Maintained By:** News123 Team
 **Questions?** See `/docs/BRAND_GUIDELINES.md` or create an issue

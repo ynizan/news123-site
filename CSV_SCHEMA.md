@@ -1,6 +1,6 @@
-# PermitIndex CSV Schema Documentation
+# News123 CSV Schema Documentation
 
-This document defines the complete data schema for permits in the PermitIndex system.
+This document defines the complete data schema for permits in the News123 system.
 
 ## Schema Version: 3.0 (29 columns)
 
@@ -375,7 +375,7 @@ If you encounter schema validation errors:
 
 ---
 
-**Schema Maintainer**: PermitIndex Development Team
+**Schema Maintainer**: News123 Development Team
 **Last Schema Change**: 2025-11-19 (Added 2 columns: description, processing_time; column order changed)
 **Previous Change**: 2025-11-17 (Added 8 community/contact columns)
 **Next Review**: As needed for new features

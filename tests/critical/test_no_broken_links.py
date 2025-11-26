@@ -8,7 +8,7 @@ def test_homepage_internal_links(page, live_url):
     response = page.goto(live_url)
 
     # Handle 403 from Cloudflare bot protection on production
-    if response.status == 403 and 'permitindex.com' in live_url:
+    if response.status == 403 and 'news123.info' in live_url:
         pytest.skip("Production site has bot protection enabled (403)")
 
     links = page.locator('a[href]').all()

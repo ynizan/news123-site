@@ -1,6 +1,6 @@
-# PermitIndex Plausible Analytics Events
+# News123 Plausible Analytics Events
 
-This document defines all Plausible analytics events tracked across the PermitIndex platform for premium features.
+This document defines all Plausible analytics events tracked across the News123 platform for premium features.
 
 ## Page Views
 
@@ -169,7 +169,7 @@ This document defines all Plausible analytics events tracked across the PermitIn
 
 ### Viewing Events in Plausible
 
-1. **Dashboard:** Visit [https://plausible.io/permitindex.com](https://plausible.io/permitindex.com)
+1. **Dashboard:** Visit [https://plausible.io/news123.info](https://plausible.io/news123.info)
 2. **Custom Events:** Click "Goals" in the left sidebar
 3. **Filter by Properties:** Click any event to see breakdown by custom properties
 

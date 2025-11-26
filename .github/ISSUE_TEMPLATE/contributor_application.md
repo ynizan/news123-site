@@ -1,6 +1,6 @@
 ---
 name: Contributor Application
-about: Apply to become a PermitIndex contributor and verify permit information for your jurisdiction
+about: Apply to become a News123 contributor and verify permit information for your jurisdiction
 title: '[CONTRIBUTOR] [Your Name] - [Your City, State]'
 labels: contributor-application
 assignees: ''
@@ -8,7 +8,7 @@ assignees: ''
 
 ## Contributor Application
 
-Thank you for your interest in becoming a PermitIndex contributor! Please fill out the information below.
+Thank you for your interest in becoming a News123 contributor! Please fill out the information below.
 
 ### About You
 
@@ -48,7 +48,7 @@ By applying, I commit to:
 
 ### Additional Information
 
-**How did you hear about PermitIndex?**
+**How did you hear about News123?**
 [Your answer]
 
 **Anything else we should know?**

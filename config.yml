@@ -1,0 +1,27 @@
+# News123 Site Configuration
+# This file contains site-wide settings used by the generator and tests
+
+site:
+  name: News123
+  domain: news123.info
+  base_url: https://news123.info
+  description: News aggregation and articles site
+
+# Analytics configuration
+analytics:
+  plausible_domain: news123.info
+
+# Contact information
+contact:
+  email: contact@news123.info
+  support_email: support@news123.info
+
+# Testing configuration
+testing:
+  test_url: https://news123.info
+  skip_live_tests: false
+
+# Cloudflare worker configuration
+worker:
+  name: news123-feedback-proxy
+  domain: news123.info

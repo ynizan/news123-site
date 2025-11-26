@@ -14,7 +14,7 @@ A Cloudflare Worker acts as a secure proxy between the frontend and GitHub's API
 
 1. Go to: https://github.com/settings/tokens
 2. Click "Generate new token" → "Generate new token (classic)"
-3. Give it a name: "PermitIndex Feedback Worker"
+3. Give it a name: "News123 Feedback Worker"
 4. Select scopes:
    - ✅ `public_repo` (if repo is public)
    - ✅ `repo` (if repo is private)
@@ -44,8 +44,8 @@ wrangler deploy
 
 This will output something like:
 ```
-Published permitindex-feedback-proxy (0.01 sec)
-  https://permitindex-feedback-proxy.your-subdomain.workers.dev
+Published news123-feedback-proxy (0.01 sec)
+  https://news123-feedback-proxy.your-subdomain.workers.dev
 ```
 
 **COPY THIS URL** - you'll need it for the next step.
@@ -69,7 +69,7 @@ const response = await fetch('https://api.github.com/repos/ynizan/permitindex-si
 Replace it with:
 
 ```javascript
-const response = await fetch('https://permitindex-feedback-proxy.YOUR-SUBDOMAIN.workers.dev', {
+const response = await fetch('https://news123-feedback-proxy.YOUR-SUBDOMAIN.workers.dev', {
 ```
 
 Replace `YOUR-SUBDOMAIN` with your actual Worker URL from step 4.
@@ -107,7 +107,7 @@ git push
 
 ## Testing
 
-1. Visit any permit page: https://permitindex.com/california/contractor-license/
+1. Visit any permit page: https://news123.info/california/contractor-license/
 2. Fill out the feedback form
 3. Submit
 4. You should see: ✅ "Thank you! Your feedback has been submitted..."
@@ -143,17 +143,17 @@ git push
 
 ## Optional: Custom Domain
 
-Instead of `permitindex-feedback-proxy.workers.dev`, you can use:
-`api.permitindex.com/feedback`
+Instead of `news123-feedback-proxy.workers.dev`, you can use:
+`api.news123.info/feedback`
 
-1. In Cloudflare dashboard: Workers → permitindex-feedback-proxy → Settings → Triggers
+1. In Cloudflare dashboard: Workers → news123-feedback-proxy → Settings → Triggers
 2. Add Custom Domain or Route:
-   - Pattern: `permitindex.com/api/feedback`
-   - Worker: permitindex-feedback-proxy
+   - Pattern: `news123.info/api/feedback`
+   - Worker: news123-feedback-proxy
 
 Then update the fetch URL in your template to:
 ```javascript
-const response = await fetch('https://permitindex.com/api/feedback', {
+const response = await fetch('https://news123.info/api/feedback', {
 ```
 
 ---

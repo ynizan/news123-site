@@ -25,7 +25,7 @@
 3. Deploy
 
 ### Email Waitlist
-**Subject:** PermitIndex Pro is LIVE - Your Early Access
+**Subject:** News123 Pro is LIVE - Your Early Access
 
 Offer: 20% off first 3 months with code EARLYBIRD
 
@@ -64,5 +64,5 @@ Offer: 20% off first 3 months with code EARLYBIRD
 
 ## Contact List
 
-- Support email: support@permitindex.com
-- Sales email: sales@permitindex.com
+- Support email: support@news123.info
+- Sales email: sales@news123.info

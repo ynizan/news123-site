@@ -1,14 +1,14 @@
-name = "permitindex-feedback-proxy"
+name = "news123-feedback-proxy"
 main = "feedback-proxy.js"
 compatibility_date = "2024-01-01"
 
-# Worker will be available at: permitindex-feedback-proxy.your-subdomain.workers.dev
-# Or you can bind it to a route like: api.permitindex.com/feedback
+# Worker will be available at: news123-feedback-proxy.your-subdomain.workers.dev
+# Or you can bind it to a route like: api.news123.info/feedback
 
 # Environment variables (add via Cloudflare dashboard or wrangler)
 # GITHUB_TOKEN = "your-github-personal-access-token"
 
 # Optional: Custom routes
 # routes = [
-#   { pattern = "permitindex.com/api/feedback", zone_name = "permitindex.com" }
+#   { pattern = "news123.info/api/feedback", zone_name = "news123.info" }
 # ]

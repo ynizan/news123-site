@@ -54,7 +54,7 @@ def tablet_page(browser):
 @pytest.fixture(scope="session")
 def live_url():
     """Base URL for live site"""
-    return os.getenv('TEST_URL', 'https://permitindex.com')
+    return os.getenv('TEST_URL', 'https://news123.info')
 
 @pytest.fixture(scope="session")
 def output_dir():

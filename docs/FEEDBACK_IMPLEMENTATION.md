@@ -26,7 +26,7 @@ Fix the 401 authentication error on the feedback form by deploying a Cloudflare 
 1. Navigate to: https://github.com/settings/tokens
 2. Click **"Generate new token"** → **"Generate new token (classic)"**
 3. Configure token:
-   - **Note:** `PermitIndex Feedback Worker`
+   - **Note:** `News123 Feedback Worker`
    - **Expiration:** No expiration (or 1 year)
    - **Scopes:** Check ✅ `public_repo`
 4. Click **"Generate token"**
@@ -72,17 +72,17 @@ wrangler deploy
 ```
 ✨ Compiled Worker successfully
 ✨ Uploading Worker...
-✨ Uploaded permitindex-feedback-proxy (0.65 sec)
-✨ Published permitindex-feedback-proxy (0.32 sec)
-  https://permitindex-feedback-proxy.yaniv-nizan-2e3.workers.dev
+✨ Uploaded news123-feedback-proxy (0.65 sec)
+✨ Published news123-feedback-proxy (0.32 sec)
+  https://news123-feedback-proxy.yaniv-nizan-2e3.workers.dev
 
 ✨ Success! Your worker is live at:
-   https://permitindex-feedback-proxy.yaniv-nizan-2e3.workers.dev
+   https://news123-feedback-proxy.yaniv-nizan-2e3.workers.dev
 ```
 
 **COPY THIS URL** - you'll need it in Step 6.
 
-Example: `https://permitindex-feedback-proxy.yaniv-nizan-2e3.workers.dev`
+Example: `https://news123-feedback-proxy.yaniv-nizan-2e3.workers.dev`
 
 ---
 
@@ -132,7 +132,7 @@ const response = await fetch('https://api.github.com/repos/ynizan/permitindex-si
 
 **Replace with YOUR Worker URL from Step 4:**
 ```javascript
-const response = await fetch('https://permitindex-feedback-proxy.yaniv-nizan-2e3.workers.dev', {
+const response = await fetch('https://news123-feedback-proxy.yaniv-nizan-2e3.workers.dev', {
 ```
 
 **Find line ~622-627 (the body parameter):**
@@ -204,7 +204,7 @@ git push origin main
 
 ### Step 9: Test It!
 
-1. **Open:** https://permitindex.com/california/contractor-license/
+1. **Open:** https://news123.info/california/contractor-license/
 
 2. **Fill out feedback form:**
    - Select: 💡 Helpful Tip
@@ -272,7 +272,7 @@ Then submit the form again. You'll see real-time logs showing what went wrong.
          ▼
 ┌─────────────────────────────────┐
 │   Cloudflare Worker             │
-│   permitindex-feedback-proxy    │
+│   news123-feedback-proxy    │
 │                                 │
 │   Secrets:                      │
 │   - GITHUB_TOKEN (secure)       │
@@ -332,11 +332,11 @@ To approve and display on site:
 4. Site rebuilds with approved feedback
 
 ### 3. Optional: Custom Domain
-Instead of `.workers.dev` URL, use `api.permitindex.com/feedback`:
+Instead of `.workers.dev` URL, use `api.news123.info/feedback`:
 
 **In Cloudflare Dashboard:**
-- Workers → permitindex-feedback-proxy → Settings → Triggers
-- Add Route: `permitindex.com/api/feedback`
+- Workers → news123-feedback-proxy → Settings → Triggers
+- Add Route: `news123.info/api/feedback`
 - Update template to use this URL
 
 ---

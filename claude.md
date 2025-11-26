@@ -1,4 +1,4 @@
-# PermitIndex - AI Assistant Guide
+# News123 - AI Assistant Guide
 
 **Quick Reference for Claude Code and AI Assistants**
 
@@ -90,7 +90,7 @@ git diff HEAD origin/<branch-name>  # See actual changes
 
 ## 📁 Project Overview
 
-**PermitIndex** is a static site generator for US government permits and licenses.
+**News123** is a static site generator for US government permits and licenses.
 
 ### Tech Stack
 - **Generator**: Python 3.11+ with Jinja2 templates
@@ -101,7 +101,7 @@ git diff HEAD origin/<branch-name>  # See actual changes
 
 ### Key Files
 ```
-permitindex-site/
+news123-site/
 ├── generator.py              # Main site generator
 ├── data/
 │   ├── permits.csv          # 27-column permit data (see CSV_SCHEMA.md)
@@ -229,7 +229,7 @@ gh run list --limit 1
 gh run view --log
 ```
 
-Or visit: https://github.com/ynizan/permitindex-site/actions
+Or visit: https://github.com/ynizan/news123-site/actions
 
 📖 **Full testing guide**: `docs/TESTING_IMPLEMENTATION_GUIDE.md`
 
@@ -292,10 +292,10 @@ git push origin --delete claude/<branch-name>
 ```bash
 # Generate PR URL
 BRANCH=$(git branch --show-current)
-echo "🔗 PR Link: https://github.com/ynizan/permitindex-site/pull/new/$BRANCH"
+echo "🔗 PR Link: https://github.com/ynizan/news123-site/pull/new/$BRANCH"
 
 # Or open directly in browser (macOS):
-open "https://github.com/ynizan/permitindex-site/pull/new/$BRANCH"
+open "https://github.com/ynizan/news123-site/pull/new/$BRANCH"
 ```
 
 **B. Using CLI/Terminal on local machine:**
@@ -307,7 +307,7 @@ gh pr create         # Interactive mode with prompts
 
 **URL Pattern** (for manual browser access):
 ```
-https://github.com/ynizan/permitindex-site/pull/new/<branch-name>
+https://github.com/ynizan/news123-site/pull/new/<branch-name>
 ```
 
 ### When to Use Feature Branches
@@ -470,10 +470,10 @@ python3 generator.py
 ```bash
 # Generate PR link for current branch (use when working in Claude Code Web)
 BRANCH=$(git branch --show-current)
-echo "🔗 https://github.com/ynizan/permitindex-site/pull/new/$BRANCH"
+echo "🔗 https://github.com/ynizan/news123-site/pull/new/$BRANCH"
 
 # Or open directly in browser (macOS):
-open "https://github.com/ynizan/permitindex-site/pull/new/$BRANCH"
+open "https://github.com/ynizan/news123-site/pull/new/$BRANCH"
 ```
 **Note:** When using CLI/terminal on local machine, use `gh` CLI instead:
 ```bash
@@ -527,7 +527,7 @@ Before considering any task complete:
 5. Repeat until all pass
 
 ### GitHub Actions Fail
-1. Visit https://github.com/ynizan/permitindex-site/actions
+1. Visit https://github.com/ynizan/news123-site/actions
 2. Click on failed workflow
 3. Expand failed step
 4. Read error logs
@@ -550,7 +550,7 @@ Before considering any task complete:
 
 ## 📞 Getting Help
 
-- **GitHub Issues**: https://github.com/ynizan/permitindex-site/issues
+- **GitHub Issues**: https://github.com/ynizan/news123-site/issues
 - **Workflow Errors**: Check `CLAUDE_CODE_WORKFLOW.md`
 - **Schema Questions**: Check `CSV_SCHEMA.md`
 - **Brand Questions**: Check `docs/BRAND_GUIDELINES.md`

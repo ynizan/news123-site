@@ -1,6 +1,6 @@
-# Build & Test Plan for PermitIndex
+# Build & Test Plan for News123
 
-This document outlines the automated testing strategy for the PermitIndex static site generator.
+This document outlines the automated testing strategy for the News123 static site generator.
 
 ## Pre-Build Checks
 
@@ -284,7 +284,7 @@ Before each release, manually verify:
 ```bash
 # Using Lighthouse CI
 npm install -g @lhci/cli
-lhci autorun --collect.url=https://permitindex.com/california/food-truck-operating-permit/
+lhci autorun --collect.url=https://news123.info/california/food-truck-operating-permit/
 
 # Target scores:
 # Performance: 90+

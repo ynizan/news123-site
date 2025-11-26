@@ -57,5 +57,5 @@ jobs:
         if: steps.tests.outcome == 'failure'
         run: |
           curl -X POST -H 'Content-type: application/json' \
-            --data '{"text":"🚨 *PermitIndex Daily Visual Tests Failed*\n\nTest report has been generated. Check the workflow artifacts for details.\n\nWorkflow: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+            --data '{"text":"🚨 *News123 Daily Visual Tests Failed*\n\nTest report has been generated. Check the workflow artifacts for details.\n\nWorkflow: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
             ${{ secrets.SLACK_WEB_HOOK }}

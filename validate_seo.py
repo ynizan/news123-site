@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-SEO Validation Script for PermitIndex
-Tests deployed site at https://permitindex.com/
+SEO Validation Script for News123
+Tests deployed site at https://news123.info/
 """
 
 import asyncio
 import json
 from playwright.async_api import async_playwright
 
-BASE_URL = "https://permitindex.com"
+BASE_URL = "https://news123.info"
 
 async def validate_seo():
     """Run comprehensive SEO validation tests"""
@@ -25,7 +25,7 @@ async def validate_seo():
         page = await context.new_page()
 
         print("=" * 80)
-        print("🔍 PERMITINDEX SEO VALIDATION")
+        print("🔍 NEWS123 SEO VALIDATION")
         print("=" * 80)
         print(f"Testing: {BASE_URL}\n")
 
