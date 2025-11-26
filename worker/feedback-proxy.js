@@ -70,14 +70,14 @@ export default {
 
       // Create GitHub Issue
       const githubResponse = await fetch(
-        'https://api.github.com/repos/ynizan/permitindex-site/issues',
+        'https://api.github.com/repos/ynizan/news123-site/issues',
         {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${env.GITHUB_TOKEN}`,
             'Accept': 'application/vnd.github.v3+json',
             'Content-Type': 'application/json',
-            'User-Agent': 'PermitIndex-Feedback-Worker'
+            'User-Agent': 'News123-Feedback-Worker'
           },
           body: JSON.stringify({
             title: `User Feedback: ${permit_slug}`,
