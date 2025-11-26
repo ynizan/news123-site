@@ -222,7 +222,7 @@ All new pages must include the Plausible script in `<head>`:
 
 ```html
 <!-- Privacy-friendly analytics by Plausible -->
-<script async src="https://plausible.io/js/pa-ag6g5Gg1btKfcdZ4oA-vo.js"></script>
+<script async src="https://plausible.io/js/pa-IYykTdOVkJEUwTYdl9Dsq.js"></script>
 <script>
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
