@@ -107,7 +107,7 @@ git push
 
 ## Testing
 
-1. Visit any permit page: https://news123.info/california/contractor-license/
+1. Visit any permit page: https://ainews123.com/california/contractor-license/
 2. Fill out the feedback form
 3. Submit
 4. You should see: ✅ "Thank you! Your feedback has been submitted..."
@@ -144,16 +144,16 @@ git push
 ## Optional: Custom Domain
 
 Instead of `news123-feedback-proxy.workers.dev`, you can use:
-`api.news123.info/feedback`
+`api.ainews123.com/feedback`
 
 1. In Cloudflare dashboard: Workers → news123-feedback-proxy → Settings → Triggers
 2. Add Custom Domain or Route:
-   - Pattern: `news123.info/api/feedback`
+   - Pattern: `ainews123.com/api/feedback`
    - Worker: news123-feedback-proxy
 
 Then update the fetch URL in your template to:
 ```javascript
-const response = await fetch('https://news123.info/api/feedback', {
+const response = await fetch('https://ainews123.com/api/feedback', {
 ```
 
 ---

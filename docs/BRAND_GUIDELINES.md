@@ -498,7 +498,7 @@ For border-radius R:
 ## Contact
 
 For brand questions or asset requests:
-- Website: news123.info
+- Website: ainews123.com
 - Repository: github.com/ynizan/permitindex-site
 
 **Document Version:** 1.0  

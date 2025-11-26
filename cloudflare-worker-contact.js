@@ -9,7 +9,7 @@
  * 2. Create a new Worker
  * 3. Copy this code into the worker
  * 4. Add the following environment variables (Settings > Variables):
- *    - SEND_TO_EMAIL: Your email address (e.g., contact@news123.info)
+ *    - SEND_TO_EMAIL: Your email address (e.g., contact@ainews123.com)
  *
  * 5. Option A: Use Cloudflare Email Routing (Free)
  *    - Set up Email Routing in Cloudflare Dashboard
@@ -22,7 +22,7 @@
  *      - MAILGUN_DOMAIN: Your Mailgun domain
  *
  * 7. Set up a route:
- *    - Route pattern: news123.info/api/contact
+ *    - Route pattern: ainews123.com/api/contact
  *    - Worker: [your worker name]
  *
  * 8. Test the form on your site!
@@ -114,7 +114,7 @@ async function sendEmail(data, env) {
   // Fallback: Log to console (for development/testing)
   console.log('Email would be sent:', {
     from: `${name} <${email}>`,
-    to: env.SEND_TO_EMAIL || 'contact@news123.info',
+    to: env.SEND_TO_EMAIL || 'contact@ainews123.com',
     subject: `[News123 Contact] ${subject}`,
     message,
   });
@@ -137,7 +137,7 @@ async function sendViaMailgun(data, env) {
 
   const formData = new FormData();
   formData.append('from', `News123 Contact Form <noreply@${env.MAILGUN_DOMAIN}>`);
-  formData.append('to', env.SEND_TO_EMAIL || 'contact@news123.info');
+  formData.append('to', env.SEND_TO_EMAIL || 'contact@ainews123.com');
   formData.append('subject', `[Contact Form] ${subject}`);
   formData.append('text', `
 Name: ${name}

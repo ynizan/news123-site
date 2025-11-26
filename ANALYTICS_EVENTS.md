@@ -169,7 +169,7 @@ This document defines all Plausible analytics events tracked across the News123 
 
 ### Viewing Events in Plausible
 
-1. **Dashboard:** Visit [https://plausible.io/news123.info](https://plausible.io/news123.info)
+1. **Dashboard:** Visit [https://plausible.io/ainews123.com](https://plausible.io/ainews123.com)
 2. **Custom Events:** Click "Goals" in the left sidebar
 3. **Filter by Properties:** Click any event to see breakdown by custom properties
 
