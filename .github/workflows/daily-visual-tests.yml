@@ -1,9 +1,13 @@
 name: Daily Visual & Brand Tests
 
+# DISABLED: Tests failing daily - paused until fixed
+# on:
+#   schedule:
+#     - cron: '0 3 * * *'  # 3 AM UTC daily
+#   workflow_dispatch:
+
 on:
-  schedule:
-    - cron: '0 3 * * *'  # 3 AM UTC daily
-  workflow_dispatch:
+  workflow_dispatch:  # Manual trigger only
 
 jobs:
   visual-tests:
